@@ -1,12 +1,14 @@
-This is a rewrite of [twitter-writes-hamlet-v2](https://github.com/lipsumar/twitter-writes-hamlet-v2).
+# parse-hamlet
 
-Currently only contains the "parse" package, more to come.
+This package can download and parse the full text of Hamlet.
 
 ### Usage
 
 `pnpm run parse-scenes` will produce `entries.json`
 
 ### corrections to scenes HTML pages
+
+Some manual corrections were needed to parse:
 
 - A4S2: `(<I>Within.</I>)` => `<I>(Within.)</I>`
 - A4S4: remove duplicate and unclosed `<a name=sd1>`
