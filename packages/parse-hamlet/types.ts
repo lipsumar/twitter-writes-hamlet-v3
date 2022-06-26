@@ -20,7 +20,6 @@ export interface ContinuedDialogueEntry extends BaseEntry {
   type: "dialogue";
   text: TextContent;
   continued: true; // if true, is a continued dialogue after a DirectionEntry that cuts it
-  direction?: TextContent;
 }
 export interface DirectionEntry extends BaseEntry {
   type: "direction";

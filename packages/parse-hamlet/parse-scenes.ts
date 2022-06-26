@@ -49,6 +49,10 @@ function parseScene(
       if (lastEntry.type === "direction") {
         appendToLastEntry(text, words);
       } else if (lastEntry.type === "dialogue" && lastEntry.text.raw === "") {
+        invariant(
+          !("continued" in lastEntry),
+          "cant add direction to continuedDialogue"
+        );
         lastEntry.direction = { raw: text, words };
       } else {
         entries.push({
@@ -112,23 +116,12 @@ function validateEntry(entry: Entry): void {
     invariant(entry.text.raw.trim() !== "", "dialogue must have a text");
     if (!("continued" in entry)) {
       invariant(entry.name.raw.trim() !== "", "dialogue must have a name");
-    }
-
-    // if (
-    //   entry.name !== 'All' &&
-    //   entry.name !== 'Lord' &&
-    //   entry.name !== 'Ambassador'
-    // )
-    //   invariant(
-    //     entry.name.match(/^[A-Z]+$/),
-    //     'dialogue name must be uppercase'
-    //   );
-
-    if (typeof entry.direction !== "undefined") {
-      invariant(
-        entry.direction.raw.trim() !== "",
-        "dialogue.direction must have a text"
-      );
+      if (typeof entry.direction !== "undefined") {
+        invariant(
+          entry.direction.raw.trim() !== "",
+          "dialogue.direction must have a text"
+        );
+      }
     }
   }
 }
@@ -233,7 +226,7 @@ function validateEntries(entries: Entry[]) {
       entry.continued === true
     ) {
       invariant(
-        typeof entry.direction === "undefined",
+        typeof (entry as any).direction === "undefined",
         "continued dialogue cant have direction"
       );
     }
