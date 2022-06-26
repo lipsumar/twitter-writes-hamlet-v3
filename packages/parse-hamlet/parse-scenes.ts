@@ -227,6 +227,16 @@ function validateEntries(entries: Entry[]) {
         index++;
       });
     }
+    if (
+      entry.type === "dialogue" &&
+      "continued" in entry &&
+      entry.continued === true
+    ) {
+      invariant(
+        typeof entry.direction === "undefined",
+        "continued dialogue cant have direction"
+      );
+    }
     if ("direction" in entry) {
       invariant(entry.direction, "entry.direction cant be set and empty");
       entry.direction.words.forEach((w) => {
