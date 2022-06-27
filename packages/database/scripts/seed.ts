@@ -1,7 +1,7 @@
-import "dotenv-defaults/config";
+import "env";
 import entriesJSon from "parse-hamlet/entries.json";
 import { Entry } from "types";
-import { db } from ".";
+import { db } from "..";
 const entries = entriesJSon as Entry[];
 
 const words = entries.flatMap((entry) => {

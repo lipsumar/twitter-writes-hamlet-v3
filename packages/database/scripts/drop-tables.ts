@@ -1,5 +1,5 @@
-import "dotenv-defaults/config";
-import { db } from ".";
+import "env";
+import { db } from "..";
 
 (async () => {
   await db.schema.dropTableIfExists("words");
