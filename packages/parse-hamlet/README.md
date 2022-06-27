@@ -4,7 +4,7 @@ This package can download and parse the full text of Hamlet.
 
 ### Usage
 
-`pnpm run parse-scenes` will produce `entries.json`
+`pnpm run parse` will produce `entries.json`
 
 ### corrections to scenes HTML pages
 

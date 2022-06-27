@@ -1,12 +1,4 @@
-import { writeFileSync } from "fs";
-import scenesData from "./scenes.json";
-import { Scene, Word } from "./types";
-
-//const scenes = scenesData as Scene[];
-// const fullText = scenes
-//   .map((scene) => scene.entries.map((entry) => entry.text))
-//   .flat()
-//   .join(' ');
+import { Word } from "types";
 
 const okWords = [
   "who's",
