@@ -74,6 +74,7 @@
         },
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 13
         },
         {
@@ -107,6 +108,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 19
         }
       ]
@@ -179,6 +181,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 30
         }
       ]
@@ -222,6 +225,7 @@
       "words": [
         {
           "token": "Barnardo",
+          "alternative": "bernardo",
           "index": 36
         }
       ]
@@ -235,6 +239,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 37
         }
       ]
@@ -303,6 +308,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 47
         }
       ]
@@ -433,6 +439,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 72
         }
       ]
@@ -505,6 +512,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 83
         }
       ]
@@ -843,6 +851,7 @@
       "words": [
         {
           "token": "Barnardo",
+          "alternative": "bernardo",
           "index": 143
         },
         {
@@ -914,6 +923,7 @@
         },
         {
           "token": "Barnardo",
+          "alternative": "bernardo",
           "index": 155
         }
       ]
@@ -927,6 +937,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 156
         }
       ]
@@ -999,6 +1010,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 167
         }
       ]
@@ -1062,7 +1074,7 @@
         },
         {
           "token": "appear'd",
-          "alternative": "'ded",
+          "alternative": "appeared",
           "index": 178
         },
         {
@@ -1084,6 +1096,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 181
         }
       ]
@@ -1388,6 +1401,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 246
         }
       ]
@@ -1543,6 +1557,7 @@
         },
         {
           "token": "Barnardo",
+          "alternative": "bernardo",
           "index": 280
         },
         {
@@ -1568,6 +1583,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 284
         }
       ]
@@ -1797,6 +1813,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 332
         }
       ]
@@ -1901,6 +1918,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 351
         }
       ]
@@ -2010,6 +2028,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 371
         }
       ]
@@ -2259,6 +2278,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 419
         }
       ]
@@ -2399,6 +2419,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 441
         }
       ]
@@ -2715,7 +2736,7 @@
         },
         {
           "token": "frown'd",
-          "alternative": "'ded",
+          "alternative": "frowned",
           "index": 508
         },
         {
@@ -3426,7 +3447,7 @@
         },
         {
           "token": "appear'd",
-          "alternative": "'ded",
+          "alternative": "appeared",
           "index": 671
         },
         {
@@ -3475,7 +3496,7 @@
         },
         {
           "token": "prick'd",
-          "alternative": "'ded",
+          "alternative": "pricked",
           "index": 683
         },
         {
@@ -3572,7 +3593,7 @@
         },
         {
           "token": "esteem'd",
-          "alternative": "'ded",
+          "alternative": "esteemed",
           "index": 707
         },
         {
@@ -3609,7 +3630,7 @@
         },
         {
           "token": "seal'd",
-          "alternative": "'ded",
+          "alternative": "sealed",
           "index": 716
         },
         {
@@ -3762,7 +3783,7 @@
         },
         {
           "token": "return'd",
-          "alternative": "'ded",
+          "alternative": "returned",
           "index": 754
         },
         {
@@ -3843,7 +3864,7 @@
         },
         {
           "token": "design'd",
-          "alternative": "'ded",
+          "alternative": "designed",
           "index": 774
         },
         {
@@ -3940,7 +3961,7 @@
         },
         {
           "token": "Shark'd",
-          "alternative": "'ded",
+          "alternative": "Sharked",
           "index": 798
         },
         {
@@ -4275,6 +4296,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 879
         }
       ]
@@ -5478,6 +5500,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 1149
         }
       ]
@@ -5694,6 +5717,7 @@
       "words": [
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 1187
         }
       ]
@@ -6280,7 +6304,7 @@
         },
         {
           "token": "hallow'd",
-          "alternative": "'ded",
+          "alternative": "hallowed",
           "index": 1325
         },
         {
@@ -7322,7 +7346,7 @@
         },
         {
           "token": "barr'd",
-          "alternative": "'ded",
+          "alternative": "barred",
           "index": 1567
         },
         {
@@ -7551,7 +7575,7 @@
         },
         {
           "token": "fail'd",
-          "alternative": "'ded",
+          "alternative": "failed",
           "index": 1624
         },
         {
@@ -8926,7 +8950,7 @@
         },
         {
           "token": "seal'd",
-          "alternative": "'ded",
+          "alternative": "sealed",
           "index": 1940
         },
         {
@@ -10272,7 +10296,7 @@
         },
         {
           "token": "unschool'd",
-          "alternative": "'ded",
+          "alternative": "unschooled",
           "index": 2243
         },
         {
@@ -11480,7 +11504,7 @@
         },
         {
           "token": "fix'd",
-          "alternative": "'ded",
+          "alternative": "fixed",
           "index": 2528
         },
         {
@@ -12057,7 +12081,7 @@
         },
         {
           "token": "follow'd",
-          "alternative": "'ded",
+          "alternative": "followed",
           "index": 2671
         },
         {
@@ -12154,7 +12178,7 @@
         },
         {
           "token": "mourn'd",
-          "alternative": "'ded",
+          "alternative": "mourned",
           "index": 2695
         },
         {
@@ -12464,6 +12488,7 @@
         },
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 2770
         }
       ]
@@ -12805,6 +12830,7 @@
         },
         {
           "token": "Barnardo",
+          "alternative": "bernardo",
           "index": 2832
         }
       ]
@@ -14074,6 +14100,7 @@
         },
         {
           "token": "Barnardo",
+          "alternative": "bernardo",
           "index": 3082
         },
         {
@@ -14247,7 +14274,7 @@
         },
         {
           "token": "walk'd",
-          "alternative": "'ded",
+          "alternative": "walked",
           "index": 3125
         },
         {
@@ -14260,7 +14287,7 @@
         },
         {
           "token": "oppress'd",
-          "alternative": "'ded",
+          "alternative": "oppressed",
           "index": 3128
         },
         {
@@ -14461,7 +14488,7 @@
         },
         {
           "token": "deliver'd",
-          "alternative": "'ded",
+          "alternative": "delivered",
           "index": 3178
         },
         {
@@ -14650,7 +14677,7 @@
         },
         {
           "token": "watch'd",
-          "alternative": "'ded",
+          "alternative": "watched",
           "index": 3218
         }
       ]
@@ -14899,7 +14926,7 @@
         },
         {
           "token": "vanish'd",
-          "alternative": "'ded",
+          "alternative": "vanished",
           "index": 3273
         },
         {
@@ -14985,7 +15012,7 @@
         },
         {
           "token": "honour'd",
-          "alternative": "'ded",
+          "alternative": "honoured",
           "index": 3287
         },
         {
@@ -15150,6 +15177,7 @@
         },
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 3322
         }
       ]
@@ -15193,7 +15221,7 @@
       "words": [
         {
           "token": "Arm'd",
-          "alternative": "'ded",
+          "alternative": "Armed",
           "index": 3328
         },
         {
@@ -15223,6 +15251,7 @@
         },
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 3333
         }
       ]
@@ -15232,7 +15261,7 @@
       "words": [
         {
           "token": "Arm'd",
-          "alternative": "'ded",
+          "alternative": "Armed",
           "index": 3334
         },
         {
@@ -15296,6 +15325,7 @@
         },
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 3344
         }
       ]
@@ -15447,7 +15477,7 @@
         },
         {
           "token": "look'd",
-          "alternative": "'ded",
+          "alternative": "looked",
           "index": 3370
         },
         {
@@ -15592,7 +15622,7 @@
         },
         {
           "token": "fix'd",
-          "alternative": "'ded",
+          "alternative": "fixed",
           "index": 3392
         },
         {
@@ -15757,7 +15787,7 @@
         },
         {
           "token": "Stay'd",
-          "alternative": "'ded",
+          "alternative": "Stayed",
           "index": 3419
         },
         {
@@ -15841,6 +15871,7 @@
         },
         {
           "token": "BARNARDO",
+          "alternative": "bernardo",
           "index": 3434
         }
       ]
@@ -15997,7 +16028,7 @@
         },
         {
           "token": "silver'd",
-          "alternative": "'ded",
+          "alternative": "silvered",
           "index": 3461
         }
       ]
@@ -16225,7 +16256,7 @@
         },
         {
           "token": "conceal'd",
-          "alternative": "'ded",
+          "alternative": "concealed",
           "index": 3507
         },
         {
@@ -16773,7 +16804,7 @@
         },
         {
           "token": "embark'd",
-          "alternative": "'ded",
+          "alternative": "embarked",
           "index": 3621
         },
         {
@@ -17346,7 +17377,7 @@
         },
         {
           "token": "weigh'd",
-          "alternative": "'ded",
+          "alternative": "weighed",
           "index": 3750
         },
         {
@@ -17855,7 +17886,7 @@
         },
         {
           "token": "unmaster'd",
-          "alternative": "'ded",
+          "alternative": "unmastered",
           "index": 3877
         },
         {
@@ -18390,7 +18421,7 @@
         },
         {
           "token": "puff'd",
-          "alternative": "'ded",
+          "alternative": "puffed",
           "index": 4007
         },
         {
@@ -18702,7 +18733,7 @@
         },
         {
           "token": "stay'd",
-          "alternative": "'ded",
+          "alternative": "stayed",
           "index": 4073
         },
         {
@@ -19148,7 +19179,7 @@
         },
         {
           "token": "express'd",
-          "alternative": "'ded",
+          "alternative": "expressed",
           "index": 4184
         },
         {
@@ -19702,7 +19733,7 @@
         },
         {
           "token": "lock'd",
-          "alternative": "'ded",
+          "alternative": "locked",
           "index": 4308
         },
         {
@@ -22321,7 +22352,7 @@
         },
         {
           "token": "honor'd",
-          "alternative": "'ded",
+          "alternative": "honored",
           "index": 4870
         },
         {
@@ -22394,7 +22425,7 @@
         },
         {
           "token": "tax'd",
-          "alternative": "'ded",
+          "alternative": "taxed",
           "index": 4888
         },
         {
@@ -22487,7 +22518,7 @@
         },
         {
           "token": "perform'd",
-          "alternative": "'ded",
+          "alternative": "performed",
           "index": 4911
         },
         {
@@ -23138,7 +23169,7 @@
         },
         {
           "token": "damn'd",
-          "alternative": "'ded",
+          "alternative": "damned",
           "index": 5064
         },
         {
@@ -23411,7 +23442,7 @@
         },
         {
           "token": "inurn'd",
-          "alternative": "'ded",
+          "alternative": "inurned",
           "index": 5132
         },
         {
@@ -24763,7 +24794,7 @@
         },
         {
           "token": "call'd",
-          "alternative": "'ded",
+          "alternative": "called",
           "index": 5425
         },
         {
@@ -25685,7 +25716,7 @@
         },
         {
           "token": "Doom'd",
-          "alternative": "'ded",
+          "alternative": "Doomed",
           "index": 5585
         },
         {
@@ -27264,7 +27295,7 @@
         },
         {
           "token": "link'd",
-          "alternative": "'ded",
+          "alternative": "linked",
           "index": 5951
         },
         {
@@ -27721,7 +27752,7 @@
         },
         {
           "token": "bark'd",
-          "alternative": "'ded",
+          "alternative": "barked",
           "index": 6065
         },
         {
@@ -27842,7 +27873,7 @@
         },
         {
           "token": "dispatch'd",
-          "alternative": "'ded",
+          "alternative": "dispatched",
           "index": 6095
         },
         {
@@ -27883,7 +27914,7 @@
         },
         {
           "token": "Unhousel'd",
-          "alternative": "'ded",
+          "alternative": "Unhouseled",
           "index": 6105
         },
         {
@@ -27892,7 +27923,7 @@
         },
         {
           "token": "unanel'd",
-          "alternative": "'ded",
+          "alternative": "unaneled",
           "index": 6107
         },
         {
@@ -28745,7 +28776,7 @@
         },
         {
           "token": "Unmix'd",
-          "alternative": "'ded",
+          "alternative": "Unmixed",
           "index": 6314
         },
         {
@@ -31706,7 +31737,7 @@
         },
         {
           "token": "encumber'd",
-          "alternative": "'ded",
+          "alternative": "encumbered",
           "index": 6892
         },
         {
@@ -33939,7 +33970,7 @@
         },
         {
           "token": "soil'd",
-          "alternative": "'ded",
+          "alternative": "soiled",
           "index": 7379
         },
         {
@@ -35400,12 +35431,12 @@
         },
         {
           "token": "foul'd",
-          "alternative": "'ded",
+          "alternative": "fouled",
           "index": 7681
         },
         {
           "token": "Ungarter'd",
-          "alternative": "'ded",
+          "alternative": "Ungartered",
           "index": 7682
         },
         {
@@ -35891,7 +35922,7 @@
         },
         {
           "token": "stay'd",
-          "alternative": "'ded",
+          "alternative": "stayed",
           "index": 7789
         },
         {
@@ -36108,7 +36139,7 @@
         },
         {
           "token": "turn'd",
-          "alternative": "'ded",
+          "alternative": "turned",
           "index": 7843
         },
         {
@@ -36117,7 +36148,7 @@
         },
         {
           "token": "seem'd",
-          "alternative": "'ded",
+          "alternative": "seemed",
           "index": 7845
         },
         {
@@ -36653,7 +36684,7 @@
         },
         {
           "token": "fear'd",
-          "alternative": "'ded",
+          "alternative": "feared",
           "index": 7968
         },
         {
@@ -37389,7 +37420,7 @@
         },
         {
           "token": "neighbor'd",
-          "alternative": "'ded",
+          "alternative": "neighbored",
           "index": 8141
         },
         {
@@ -37582,7 +37613,7 @@
         },
         {
           "token": "open'd",
-          "alternative": "'ded",
+          "alternative": "opened",
           "index": 8189
         },
         {
@@ -37641,7 +37672,7 @@
         },
         {
           "token": "talk'd",
-          "alternative": "'ded",
+          "alternative": "talked",
           "index": 8200
         },
         {
@@ -38454,7 +38485,7 @@
         },
         {
           "token": "return'd",
-          "alternative": "'ded",
+          "alternative": "returned",
           "index": 8376
         }
       ]
@@ -39381,7 +39412,7 @@
         },
         {
           "token": "appear'd",
-          "alternative": "'ded",
+          "alternative": "appeared",
           "index": 8570
         },
         {
@@ -39423,7 +39454,7 @@
         },
         {
           "token": "look'd",
-          "alternative": "'ded",
+          "alternative": "looked",
           "index": 8580
         },
         {
@@ -39977,7 +40008,7 @@
         },
         {
           "token": "consider'd",
-          "alternative": "'ded",
+          "alternative": "considered",
           "index": 8710
         },
         {
@@ -41972,7 +42003,7 @@
         },
         {
           "token": "play'd",
-          "alternative": "'ded",
+          "alternative": "played",
           "index": 9159
         },
         {
@@ -42037,7 +42068,7 @@
         },
         {
           "token": "look'd",
-          "alternative": "'ded",
+          "alternative": "looked",
           "index": 9175
         },
         {
@@ -42601,7 +42632,7 @@
         },
         {
           "token": "I'd",
-          "alternative": "'ded",
+          "alternative": "Ied",
           "index": 9305
         },
         {
@@ -50143,7 +50174,7 @@
         },
         {
           "token": "clapp'd",
-          "alternative": "'ded",
+          "alternative": "clapped",
           "index": 10882
         },
         {
@@ -53154,7 +53185,7 @@
         },
         {
           "token": "valenc'd",
-          "alternative": "'ded",
+          "alternative": "valenced",
           "index": 11513
         },
         {
@@ -54374,7 +54405,7 @@
         },
         {
           "token": "smear'd",
-          "alternative": "'ded",
+          "alternative": "smeared",
           "index": 11809
         },
         {
@@ -54431,7 +54462,7 @@
         },
         {
           "token": "trick'd",
-          "alternative": "'ded",
+          "alternative": "tricked",
           "index": 11823
         },
         {
@@ -54464,7 +54495,7 @@
         },
         {
           "token": "Bak'd",
-          "alternative": "'ded",
+          "alternative": "Baked",
           "index": 11831
         },
         {
@@ -54826,7 +54857,7 @@
         },
         {
           "token": "match'd",
-          "alternative": "'ded",
+          "alternative": "matched",
           "index": 11914
         },
         {
@@ -55072,7 +55103,7 @@
         },
         {
           "token": "seem'd",
-          "alternative": "'ded",
+          "alternative": "seemed",
           "index": 11975
         },
         {
@@ -56141,7 +56172,7 @@
         },
         {
           "token": "steep'd",
-          "alternative": "'ded",
+          "alternative": "steeped",
           "index": 12220
         },
         {
@@ -56568,7 +56599,7 @@
         },
         {
           "token": "bestow'd",
-          "alternative": "'ded",
+          "alternative": "bestowed",
           "index": 12319
         },
         {
@@ -56601,7 +56632,7 @@
         },
         {
           "token": "us'd",
-          "alternative": "'ded",
+          "alternative": "used",
           "index": 12327
         },
         {
@@ -57770,7 +57801,7 @@
         },
         {
           "token": "wann'd",
-          "alternative": "'ded",
+          "alternative": "wanned",
           "index": 12569
         },
         {
@@ -58283,7 +58314,7 @@
         },
         {
           "token": "damn'd",
-          "alternative": "'ded",
+          "alternative": "damned",
           "index": 12697
         },
         {
@@ -58738,7 +58769,7 @@
         },
         {
           "token": "murder'd",
-          "alternative": "'ded",
+          "alternative": "murdered",
           "index": 12810
         },
         {
@@ -58992,7 +59023,7 @@
         },
         {
           "token": "proclaim'd",
-          "alternative": "'ded",
+          "alternative": "proclaimed",
           "index": 12873
         },
         {
@@ -60371,7 +60402,7 @@
         },
         {
           "token": "beseech'd",
-          "alternative": "'ded",
+          "alternative": "beseeched",
           "index": 13175
         },
         {
@@ -62008,7 +62039,7 @@
         },
         {
           "token": "wish'd",
-          "alternative": "'ded",
+          "alternative": "wished",
           "index": 13533
         },
         {
@@ -62477,7 +62508,7 @@
         },
         {
           "token": "undiscover'd",
-          "alternative": "'ded",
+          "alternative": "undiscovered",
           "index": 13650
         },
         {
@@ -62827,7 +62858,7 @@
         },
         {
           "token": "remember'd",
-          "alternative": "'ded",
+          "alternative": "remembered",
           "index": 13737
         }
       ]
@@ -63118,7 +63149,7 @@
         },
         {
           "token": "honor'd",
-          "alternative": "'ded",
+          "alternative": "honored",
           "index": 13792
         },
         {
@@ -63853,7 +63884,7 @@
         },
         {
           "token": "believ'd",
-          "alternative": "'ded",
+          "alternative": "believed",
           "index": 13944
         },
         {
@@ -63922,7 +63953,7 @@
         },
         {
           "token": "lov'd",
-          "alternative": "'ded",
+          "alternative": "loved",
           "index": 13961
         },
         {
@@ -65423,7 +65454,7 @@
         },
         {
           "token": "suck'd",
-          "alternative": "'ded",
+          "alternative": "sucked",
           "index": 14302
         },
         {
@@ -65524,7 +65555,7 @@
         },
         {
           "token": "unmatch'd",
-          "alternative": "'ded",
+          "alternative": "unmatched",
           "index": 14327
         },
         {
@@ -65728,7 +65759,7 @@
         },
         {
           "token": "lack'd",
-          "alternative": "'ded",
+          "alternative": "lacked",
           "index": 14372
         },
         {
@@ -66583,7 +66614,7 @@
         },
         {
           "token": "unwatch'd",
-          "alternative": "'ded",
+          "alternative": "unwatched",
           "index": 14578
         },
         {
@@ -69072,7 +69103,7 @@
         },
         {
           "token": "flatter'd",
-          "alternative": "'ded",
+          "alternative": "flattered",
           "index": 15132
         },
         {
@@ -69241,7 +69272,7 @@
         },
         {
           "token": "seal'd",
-          "alternative": "'ded",
+          "alternative": "sealed",
           "index": 15174
         },
         {
@@ -73210,7 +73241,7 @@
         },
         {
           "token": "borrow'd",
-          "alternative": "'ded",
+          "alternative": "borrowed",
           "index": 16001
         },
         {
@@ -73869,7 +73900,7 @@
         },
         {
           "token": "Honor'd",
-          "alternative": "'ded",
+          "alternative": "Honored",
           "index": 16158
         },
         {
@@ -74040,7 +74071,7 @@
         },
         {
           "token": "kill'd",
-          "alternative": "'ded",
+          "alternative": "killed",
           "index": 16197
         },
         {
@@ -82826,7 +82857,7 @@
         },
         {
           "token": "Fix'd",
-          "alternative": "'ded",
+          "alternative": "Fixed",
           "index": 18033
         },
         {
@@ -82903,7 +82934,7 @@
         },
         {
           "token": "adjoin'd",
-          "alternative": "'ded",
+          "alternative": "adjoined",
           "index": 18052
         },
         {
@@ -84007,7 +84038,7 @@
         },
         {
           "token": "pardon'd",
-          "alternative": "'ded",
+          "alternative": "pardoned",
           "index": 18306
         },
         {
@@ -84140,7 +84171,7 @@
         },
         {
           "token": "possess'd",
-          "alternative": "'ded",
+          "alternative": "possessed",
           "index": 18339
         },
         {
@@ -84225,7 +84256,7 @@
         },
         {
           "token": "pardon'd",
-          "alternative": "'ded",
+          "alternative": "pardoned",
           "index": 18360
         },
         {
@@ -84433,7 +84464,7 @@
         },
         {
           "token": "compell'd",
-          "alternative": "'ded",
+          "alternative": "compelled",
           "index": 18411
         },
         {
@@ -84902,7 +84933,7 @@
         },
         {
           "token": "scann'd",
-          "alternative": "'ded",
+          "alternative": "scanned",
           "index": 18522
         },
         {
@@ -85248,7 +85279,7 @@
         },
         {
           "token": "season'd",
-          "alternative": "'ded",
+          "alternative": "seasoned",
           "index": 18608
         },
         {
@@ -85498,7 +85529,7 @@
         },
         {
           "token": "damn'd",
-          "alternative": "'ded",
+          "alternative": "damned",
           "index": 18670
         },
         {
@@ -85862,7 +85893,7 @@
         },
         {
           "token": "screen'd",
-          "alternative": "'ded",
+          "alternative": "screened",
           "index": 18743
         },
         {
@@ -87593,7 +87624,7 @@
         },
         {
           "token": "braz'd",
-          "alternative": "'ded",
+          "alternative": "brazed",
           "index": 19070
         },
         {
@@ -88520,7 +88551,7 @@
         },
         {
           "token": "mildew'd",
-          "alternative": "'ded",
+          "alternative": "mildewed",
           "index": 19287
         },
         {
@@ -88817,7 +88848,7 @@
         },
         {
           "token": "apoplex'd",
-          "alternative": "'ded",
+          "alternative": "apoplexed",
           "index": 19361
         },
         {
@@ -88871,7 +88902,7 @@
         },
         {
           "token": "thrall'd",
-          "alternative": "'ded",
+          "alternative": "thralled",
           "index": 19374
         },
         {
@@ -88953,7 +88984,7 @@
         },
         {
           "token": "cozen'd",
-          "alternative": "'ded",
+          "alternative": "cozened",
           "index": 19394
         },
         {
@@ -89483,7 +89514,7 @@
         },
         {
           "token": "Stew'd",
-          "alternative": "'ded",
+          "alternative": "Stewed",
           "index": 19519
         },
         {
@@ -90709,7 +90740,7 @@
         },
         {
           "token": "conjoin'd",
-          "alternative": "'ded",
+          "alternative": "conjoined",
           "index": 19785
         },
         {
@@ -91418,7 +91449,7 @@
         },
         {
           "token": "utter'd",
-          "alternative": "'ded",
+          "alternative": "uttered",
           "index": 19927
         },
         {
@@ -92415,7 +92446,7 @@
         },
         {
           "token": "bless'd",
-          "alternative": "'ded",
+          "alternative": "blessed",
           "index": 20169
         },
         {
@@ -92967,7 +92998,7 @@
         },
         {
           "token": "damn'd",
-          "alternative": "'ded",
+          "alternative": "damned",
           "index": 20295
         },
         {
@@ -93566,7 +93597,7 @@
         },
         {
           "token": "seal'd",
-          "alternative": "'ded",
+          "alternative": "sealed",
           "index": 20430
         },
         {
@@ -93619,7 +93650,7 @@
         },
         {
           "token": "fang'd",
-          "alternative": "'ded",
+          "alternative": "fanged",
           "index": 20443
         },
         {
@@ -94814,7 +94845,7 @@
         },
         {
           "token": "answer'd",
-          "alternative": "'ded",
+          "alternative": "answered",
           "index": 20711
         },
         {
@@ -94867,7 +94898,7 @@
         },
         {
           "token": "restrain'd",
-          "alternative": "'ded",
+          "alternative": "restrained",
           "index": 20724
         },
         {
@@ -95110,7 +95141,7 @@
         },
         {
           "token": "kill'd",
-          "alternative": "'ded",
+          "alternative": "killed",
           "index": 20781
         },
         {
@@ -95494,7 +95525,7 @@
         },
         {
           "token": "dragg'd",
-          "alternative": "'ded",
+          "alternative": "dragged",
           "index": 20868
         },
         {
@@ -95779,7 +95810,7 @@
         },
         {
           "token": "poison'd",
-          "alternative": "'ded",
+          "alternative": "poisoned",
           "index": 20934
         },
         {
@@ -97457,7 +97488,7 @@
         },
         {
           "token": "weigh'd",
-          "alternative": "'ded",
+          "alternative": "weighed",
           "index": 21272
         },
         {
@@ -97672,7 +97703,7 @@
         },
         {
           "token": "bestow'd",
-          "alternative": "'ded",
+          "alternative": "bestowed",
           "index": 21317
         },
         {
@@ -99528,7 +99559,7 @@
         },
         {
           "token": "seal'd",
-          "alternative": "'ded",
+          "alternative": "sealed",
           "index": 21684
         },
         {
@@ -101003,7 +101034,7 @@
         },
         {
           "token": "garrison'd",
-          "alternative": "'ded",
+          "alternative": "garrisoned",
           "index": 21992
         }
       ]
@@ -101696,7 +101727,7 @@
         },
         {
           "token": "quarter'd",
-          "alternative": "'ded",
+          "alternative": "quartered",
           "index": 22144
         },
         {
@@ -101950,7 +101981,7 @@
         },
         {
           "token": "puff'd",
-          "alternative": "'ded",
+          "alternative": "puffed",
           "index": 22207
         },
         {
@@ -102183,7 +102214,7 @@
         },
         {
           "token": "kill'd",
-          "alternative": "'ded",
+          "alternative": "killed",
           "index": 22265
         },
         {
@@ -102196,7 +102227,7 @@
         },
         {
           "token": "stain'd",
-          "alternative": "'ded",
+          "alternative": "stained",
           "index": 22268
         },
         {
@@ -104470,7 +104501,7 @@
         },
         {
           "token": "donn'd",
-          "alternative": "'ded",
+          "alternative": "donned",
           "index": 22736
         },
         {
@@ -104487,7 +104518,7 @@
         },
         {
           "token": "dupp'd",
-          "alternative": "'ded",
+          "alternative": "dupped",
           "index": 22740
         },
         {
@@ -105809,7 +105840,7 @@
         },
         {
           "token": "beggar'd",
-          "alternative": "'ded",
+          "alternative": "beggared",
           "index": 23039
         },
         {
@@ -108818,7 +108849,7 @@
         },
         {
           "token": "rain'd",
-          "alternative": "'ded",
+          "alternative": "rained",
           "index": 23667
         },
         {
@@ -110192,7 +110223,7 @@
         },
         {
           "token": "touch'd",
-          "alternative": "'ded",
+          "alternative": "touched",
           "index": 23958
         },
         {
@@ -112420,7 +112451,7 @@
         },
         {
           "token": "stirr'd",
-          "alternative": "'ded",
+          "alternative": "stirred",
           "index": 24453
         },
         {
@@ -112495,7 +112526,7 @@
         },
         {
           "token": "unsinew'd",
-          "alternative": "'ded",
+          "alternative": "unsinewed",
           "index": 24468
         },
         {
@@ -112904,7 +112935,7 @@
         },
         {
           "token": "timber'd",
-          "alternative": "'ded",
+          "alternative": "timbered",
           "index": 24570
         },
         {
@@ -112977,7 +113008,7 @@
         },
         {
           "token": "aim'd",
-          "alternative": "'ded",
+          "alternative": "aimed",
           "index": 24588
         },
         {
@@ -114462,7 +114493,7 @@
         },
         {
           "token": "return'd",
-          "alternative": "'ded",
+          "alternative": "returned",
           "index": 24907
         },
         {
@@ -114835,7 +114866,7 @@
         },
         {
           "token": "talk'd",
-          "alternative": "'ded",
+          "alternative": "talked",
           "index": 24993
         },
         {
@@ -115445,7 +115476,7 @@
         },
         {
           "token": "topp'd",
-          "alternative": "'ded",
+          "alternative": "topped",
           "index": 25138
         },
         {
@@ -117015,7 +117046,7 @@
         },
         {
           "token": "return'd",
-          "alternative": "'ded",
+          "alternative": "returned",
           "index": 25487
         },
         {
@@ -117563,7 +117594,7 @@
         },
         {
           "token": "scratch'd",
-          "alternative": "'ded",
+          "alternative": "scratched",
           "index": 25620
         },
         {
@@ -117799,7 +117830,7 @@
         },
         {
           "token": "assay'd",
-          "alternative": "'ded",
+          "alternative": "assayed",
           "index": 25675
         },
         {
@@ -118037,7 +118068,7 @@
         },
         {
           "token": "prepar'd",
-          "alternative": "'ded",
+          "alternative": "prepared",
           "index": 25734
         },
         {
@@ -118102,7 +118133,7 @@
         },
         {
           "token": "venom'd",
-          "alternative": "'ded",
+          "alternative": "venomed",
           "index": 25750
         },
         {
@@ -118234,7 +118265,7 @@
         },
         {
           "token": "drown'd",
-          "alternative": "'ded",
+          "alternative": "drowned",
           "index": 25777
         },
         {
@@ -118261,7 +118292,7 @@
       "words": [
         {
           "token": "Drown'd",
-          "alternative": "'ded",
+          "alternative": "Drowned",
           "index": 25780
         },
         {
@@ -118796,7 +118827,7 @@
         },
         {
           "token": "Pull'd",
-          "alternative": "'ded",
+          "alternative": "Pulled",
           "index": 25910
         },
         {
@@ -118875,7 +118906,7 @@
         },
         {
           "token": "drown'd",
-          "alternative": "'ded",
+          "alternative": "drowned",
           "index": 25926
         }
       ]
@@ -118898,12 +118929,12 @@
       "words": [
         {
           "token": "Drown'd",
-          "alternative": "'ded",
+          "alternative": "Drowned",
           "index": 25928
         },
         {
           "token": "drown'd",
-          "alternative": "'ded",
+          "alternative": "drowned",
           "index": 25929
         }
       ]
@@ -122160,7 +122191,7 @@
         },
         {
           "token": "claw'd",
-          "alternative": "'ded",
+          "alternative": "clawed",
           "index": 26612
         },
         {
@@ -124859,7 +124890,7 @@
         },
         {
           "token": "pick'd",
-          "alternative": "'ded",
+          "alternative": "picked",
           "index": 27190
         },
         {
@@ -127761,7 +127792,7 @@
         },
         {
           "token": "turn'd",
-          "alternative": "'ded",
+          "alternative": "turned",
           "index": 27793
         },
         {
@@ -128500,7 +128531,7 @@
         },
         {
           "token": "allow'd",
-          "alternative": "'ded",
+          "alternative": "allowed",
           "index": 27956
         },
         {
@@ -128944,7 +128975,7 @@
         },
         {
           "token": "hop'd",
-          "alternative": "'ded",
+          "alternative": "hoped",
           "index": 28049
         },
         {
@@ -129005,7 +129036,7 @@
         },
         {
           "token": "deck'd",
-          "alternative": "'ded",
+          "alternative": "decked",
           "index": 28064
         },
         {
@@ -129030,7 +129061,7 @@
         },
         {
           "token": "strew'd",
-          "alternative": "'ded",
+          "alternative": "strewed",
           "index": 28070
         },
         {
@@ -131748,7 +131779,7 @@
         },
         {
           "token": "scarf'd",
-          "alternative": "'ded",
+          "alternative": "scarfed",
           "index": 28643
         },
         {
@@ -131809,7 +131840,7 @@
         },
         {
           "token": "Finger'd",
-          "alternative": "'ded",
+          "alternative": "Fingered",
           "index": 28658
         },
         {
@@ -132471,7 +132502,7 @@
         },
         {
           "token": "labour'd",
-          "alternative": "'ded",
+          "alternative": "laboured",
           "index": 28809
         },
         {
@@ -132902,7 +132933,7 @@
         },
         {
           "token": "allow'd",
-          "alternative": "'ded",
+          "alternative": "allowed",
           "index": 28909
         }
       ]
@@ -132937,7 +132968,7 @@
         },
         {
           "token": "seal'd",
-          "alternative": "'ded",
+          "alternative": "sealed",
           "index": 28914
         }
       ]
@@ -133088,7 +133119,7 @@
         },
         {
           "token": "Subscrib'd",
-          "alternative": "'ded",
+          "alternative": "Subscribed",
           "index": 28948
         },
         {
@@ -133538,7 +133569,7 @@
         },
         {
           "token": "kill'd",
-          "alternative": "'ded",
+          "alternative": "killed",
           "index": 29045
         },
         {
@@ -133567,7 +133598,7 @@
         },
         {
           "token": "Popp'd",
-          "alternative": "'ded",
+          "alternative": "Popped",
           "index": 29052
         },
         {
@@ -133710,7 +133741,7 @@
         },
         {
           "token": "damn'd",
-          "alternative": "'ded",
+          "alternative": "damned",
           "index": 29087
         },
         {
@@ -136775,7 +136806,7 @@
         },
         {
           "token": "impawn'd",
-          "alternative": "'ded",
+          "alternative": "impawned",
           "index": 29723
         },
         {
@@ -137316,7 +137347,7 @@
         },
         {
           "token": "impawn'd",
-          "alternative": "'ded",
+          "alternative": "impawned",
           "index": 29844
         },
         {
@@ -138414,7 +138445,7 @@
         },
         {
           "token": "fann'd",
-          "alternative": "'ded",
+          "alternative": "fanned",
           "index": 30080
         },
         {
@@ -138423,7 +138454,7 @@
         },
         {
           "token": "winnow'd",
-          "alternative": "'ded",
+          "alternative": "winnowed",
           "index": 30082
         },
         {
@@ -139757,7 +139788,7 @@
         },
         {
           "token": "prepar'd",
-          "alternative": "'ded",
+          "alternative": "prepared",
           "index": 30366
         },
         {
@@ -140049,7 +140080,7 @@
         },
         {
           "token": "punish'd",
-          "alternative": "'ded",
+          "alternative": "punished",
           "index": 30429
         },
         {
@@ -140151,7 +140182,7 @@
         },
         {
           "token": "wrong'd",
-          "alternative": "'ded",
+          "alternative": "wronged",
           "index": 30454
         },
         {
@@ -140326,7 +140357,7 @@
         },
         {
           "token": "wrong'd",
-          "alternative": "'ded",
+          "alternative": "wronged",
           "index": 30497
         },
         {
@@ -140742,7 +140773,7 @@
         },
         {
           "token": "offer'd",
-          "alternative": "'ded",
+          "alternative": "offered",
           "index": 30597
         },
         {
@@ -141291,7 +141322,7 @@
         },
         {
           "token": "better'd",
-          "alternative": "'ded",
+          "alternative": "bettered",
           "index": 30705
         },
         {
@@ -142827,7 +142858,7 @@
         },
         {
           "token": "poison'd",
-          "alternative": "'ded",
+          "alternative": "poisoned",
           "index": 30994
         },
         {
@@ -143799,7 +143830,7 @@
         },
         {
           "token": "kill'd",
-          "alternative": "'ded",
+          "alternative": "killed",
           "index": 31167
         },
         {
@@ -143978,7 +144009,7 @@
         },
         {
           "token": "poison'd",
-          "alternative": "'ded",
+          "alternative": "poisoned",
           "index": 31201
         }
       ]
@@ -144042,7 +144073,7 @@
         },
         {
           "token": "lock'd",
-          "alternative": "'ded",
+          "alternative": "locked",
           "index": 31211
         },
         {
@@ -144225,7 +144256,7 @@
         },
         {
           "token": "envenom'd",
-          "alternative": "'ded",
+          "alternative": "envenomed",
           "index": 31253
         },
         {
@@ -144246,7 +144277,7 @@
         },
         {
           "token": "turn'd",
-          "alternative": "'ded",
+          "alternative": "turned",
           "index": 31258
         },
         {
@@ -144303,7 +144334,7 @@
         },
         {
           "token": "poison'd",
-          "alternative": "'ded",
+          "alternative": "poisoned",
           "index": 31272
         },
         {
@@ -144374,7 +144405,7 @@
         },
         {
           "token": "envenom'd",
-          "alternative": "'ded",
+          "alternative": "envenomed",
           "index": 31286
         },
         {
@@ -144708,7 +144739,7 @@
         },
         {
           "token": "temper'd",
-          "alternative": "'ded",
+          "alternative": "tempered",
           "index": 31346
         },
         {
@@ -146374,7 +146405,7 @@
         },
         {
           "token": "fulfill'd",
-          "alternative": "'ded",
+          "alternative": "fulfilled",
           "index": 31711
         },
         {
@@ -146601,7 +146632,7 @@
         },
         {
           "token": "arriv'd",
-          "alternative": "'ded",
+          "alternative": "arrived",
           "index": 31764
         },
         {
@@ -147177,7 +147208,7 @@
         },
         {
           "token": "perform'd",
-          "alternative": "'ded",
+          "alternative": "performed",
           "index": 31900
         },
         {
@@ -147344,7 +147375,7 @@
         },
         {
           "token": "prov'd",
-          "alternative": "'ded",
+          "alternative": "proved",
           "index": 31938
         },
         {

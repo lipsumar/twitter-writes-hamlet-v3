@@ -119,6 +119,8 @@ const hardcodedEquivalences: Record<string, string> = {
   "o'ertop": "overtop",
   "by'r": "by our",
   "ha't": "have it",
+
+  barnardo: "bernardo",
 };
 //let count = 0;
 export function parseText(
@@ -142,7 +144,9 @@ export function parseText(
     }
 
     index++;
-    if (w.match(/^[a-zA-Z]+$/)) {
+    const wLower = w.toLowerCase();
+
+    if (w.match(/^[a-zA-Z]+$/) && !hardcodedEquivalences[wLower]) {
       // ok
       finalWords.push({ token: w, index });
       return;
@@ -163,10 +167,8 @@ export function parseText(
       return;
     }
 
-    const wLower = w.toLowerCase();
-
     if (w.slice(-2) === "'d") {
-      finalWords.push({ token: w, alternative: w.slice(-2) + "ed", index });
+      finalWords.push({ token: w, alternative: w.slice(0, -2) + "ed", index });
       return;
     }
 
