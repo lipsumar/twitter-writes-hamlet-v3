@@ -43,19 +43,45 @@ export async function setWordAsFound(word: Word, tweet: Tweet, source: string) {
     .update({ tweet_id: tweet.id_str, source });
 }
 
+type DbTweet = {
+  tweet_created_at: string;
+  tweet_text: string;
+  username: string;
+  profile_image_url: string;
+  id: string;
+};
+function dbTweetToTweet(dbTweet: DbTweet): Tweet {
+  return {
+    created_at: dbTweet.tweet_created_at,
+    text: dbTweet.tweet_text,
+    id_str: dbTweet.id,
+    user: {
+      screen_name: dbTweet.username,
+      profile_image_url_https: dbTweet.profile_image_url,
+    },
+  };
+}
 export async function getTweetAtIndex(index: number): Promise<Tweet> {
   const rows = await db("words")
     .join("tweets", "words.tweet_id", "tweets.id")
     .select("tweets.*")
     .where({ "words.id": index })
     .limit(1);
-  return rows[0];
+  return dbTweetToTweet(rows[0]);
 }
 
 export type DbLog = {
   message: string;
+  created_at: string;
   data?: Record<string, any>;
 };
 export async function dbLog(message: string, data: DbLog["data"]) {
   await db("logs").insert({ message, data });
+}
+
+export async function getLogs(filterMessages: string[]): Promise<DbLog[]> {
+  return (await db("logs")
+    .select("*")
+    .whereIn("message", filterMessages)
+    .orderBy("created_at", "asc")) as DbLog[];
 }

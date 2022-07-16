@@ -64,11 +64,13 @@ export default class SearchEngine extends EventEmitter {
       rateLimitRemaining: result.rateLimitRemaining,
       wordIndex: word.index,
     });
-
+    // console.log(result.tweets);
     const tweets = result.tweets
       .filter((tw) => this.isTweetAcceptable(tw, previousTweet))
       .reverse();
-    //this.log(`found ${allTweets.length} tweets, ${tweets.length} acceptable`);
+    this.log(
+      `found ${result.tweets.length} tweets, ${tweets.length} acceptable`
+    );
 
     const matchingTweet = tweets.find((tw) => this.matchTweet(tw, terms));
     return matchingTweet;
