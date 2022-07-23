@@ -7,34 +7,41 @@ export interface TextContent {
   raw: string;
   words: Word[];
 }
+export interface LiveWord extends Word {
+  tweetId: string | null;
+}
+export interface LiveTextContent extends TextContent {
+  words: LiveWord[];
+}
 interface BaseEntry {
   index: number;
 }
-export interface DialogueEntry extends BaseEntry {
+export interface DialogueEntry<TContent = TextContent> extends BaseEntry {
   type: "dialogue";
-  text: TextContent;
-  name: TextContent;
-  direction?: TextContent;
+  text: TContent;
+  name: TContent;
+  direction?: TContent;
 }
-export interface ContinuedDialogueEntry extends BaseEntry {
+export interface ContinuedDialogueEntry<TContent = TextContent>
+  extends BaseEntry {
   type: "dialogue";
-  text: TextContent;
+  text: TContent;
   continued: true; // if true, is a continued dialogue after a DirectionEntry that cuts it
 }
-export interface DirectionEntry extends BaseEntry {
+export interface DirectionEntry<TContent = TextContent> extends BaseEntry {
   type: "direction";
-  text: TextContent;
+  text: TContent;
 }
-export interface TitleEntry extends BaseEntry {
+export interface TitleEntry<TContent = TextContent> extends BaseEntry {
   type: "title";
   titleType: "title" | "scene";
-  text: TextContent;
+  text: TContent;
 }
-export type Entry =
-  | DialogueEntry
-  | ContinuedDialogueEntry
-  | DirectionEntry
-  | TitleEntry;
+export type Entry<TContent = TextContent> =
+  | DialogueEntry<TContent>
+  | ContinuedDialogueEntry<TContent>
+  | DirectionEntry<TContent>
+  | TitleEntry<TContent>;
 
 export interface Scene {
   entries: Entry[];

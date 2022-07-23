@@ -7,12 +7,10 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-  Bar,
 } from "recharts";
 import "./twitter-graph.css";
 import moment from "moment";
 import { useQuery } from "react-query";
-import { useMemo } from "react";
 import invariant from "tiny-invariant";
 
 // const series = [

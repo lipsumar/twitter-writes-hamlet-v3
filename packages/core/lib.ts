@@ -20,7 +20,26 @@ export async function getCurrentCursor(): Promise<number> {
   return row.id;
 }
 
-export async function getWordsAt(index: number, count = 3): Promise<Word[]> {
+type DbWord = {
+  id: number;
+  token: string;
+  alternative: string | null;
+  entry_index: number;
+  entry_field: "text" | "name" | "direction";
+  tweet_id: string | null;
+  source: string | null;
+};
+export async function getCurrentWord(): Promise<DbWord> {
+  const row = await db
+    .select("*")
+    .from("words")
+    .whereNull("tweet_id")
+    .orderBy("id", "asc")
+    .first();
+  return row;
+}
+
+export async function getNextWords(count = 3): Promise<Word[]> {
   const rows = await db
     .select<WordRecord[]>("*")
     .from("words")
@@ -28,6 +47,14 @@ export async function getWordsAt(index: number, count = 3): Promise<Word[]> {
     .orderBy("id", "asc")
     .limit(count);
   return rows.map(wordRecordToWord);
+}
+
+export async function getDbWordsAt(indices: number[]): Promise<DbWord[]> {
+  return db
+    .select<DbWord[]>("*")
+    .from("words")
+    .whereIn("id", indices)
+    .orderBy("id", "asc");
 }
 
 export async function setWordAsFound(word: Word, tweet: Tweet, source: string) {
@@ -85,3 +112,13 @@ export async function getLogs(filterMessages: string[]): Promise<DbLog[]> {
     .whereIn("message", filterMessages)
     .orderBy("created_at", "asc")) as DbLog[];
 }
+
+export type DbEntry = {
+  id: number;
+  type: "dialogue" | "direction" | "title";
+  text_raw: string;
+  name_raw: string | null;
+  direction_raw: string | null;
+  continued: boolean;
+  title_type: "title" | "scene";
+};
