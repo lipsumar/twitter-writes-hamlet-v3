@@ -54,7 +54,11 @@ describe("renderTextContent", () => {
     );
 
     expect(html).toEqual(
-      '<span data-id="1" class="visible">hello</span><span class="visible"> </span><span data-id="2" class="visible">world</span>'
+      [
+        '<span data-id="1" class="visible">hello</span>',
+        '<span data-id="2-prev" class="visible"> </span>',
+        '<span data-id="2" class="visible">world</span>',
+      ].join("")
     );
   });
   test("-hello world", () => {
@@ -76,9 +80,13 @@ describe("renderTextContent", () => {
       },
       99
     );
-    console.log(html);
     expect(html).toEqual(
-      '<span class="visible">-</span><span data-id="1" class="visible">hello</span><span class="visible"> </span><span data-id="2" class="visible">world</span>'
+      [
+        '<span data-id="1-prev" class="visible">-</span>',
+        '<span data-id="1" class="visible">hello</span>',
+        '<span data-id="2-prev" class="visible"> </span>',
+        '<span data-id="2" class="visible">world</span>',
+      ].join("")
     );
   });
   test("hello world!", () => {
@@ -100,9 +108,13 @@ describe("renderTextContent", () => {
       },
       99
     );
-    console.log("->", html);
     expect(html).toEqual(
-      '<span data-id="1" class="visible">hello</span><span class="visible"> </span><span data-id="2" class="visible">world</span><span class="visible">!</span>'
+      [
+        '<span data-id="1" class="visible">hello</span>',
+        '<span data-id="2-prev" class="visible"> </span>',
+        '<span data-id="2" class="visible">world</span>',
+        '<span data-id="2-next" class="visible">!</span>',
+      ].join("")
     );
   });
   test("hello world, current:world", () => {
@@ -126,7 +138,11 @@ describe("renderTextContent", () => {
     );
 
     expect(html).toEqual(
-      '<span data-id="1" class="visible">hello</span><span class="visible"> </span><span data-id="2" class="current">world</span>'
+      [
+        '<span data-id="1" class="visible">hello</span>',
+        '<span data-id="2-prev" class="visible"> </span>',
+        '<span data-id="2" class="current">world</span>',
+      ].join("")
     );
   });
   test("hello, dear world!, current:world", () => {
@@ -153,9 +169,15 @@ describe("renderTextContent", () => {
       },
       3
     );
-    console.log(html);
     expect(html).toEqual(
-      '<span data-id="1" class="visible">hello</span><span class="visible">, </span><span data-id="2" class="visible">dear</span><span class="visible"> </span><span data-id="3" class="current">world</span><span>!</span>'
+      [
+        '<span data-id="1" class="visible">hello</span>',
+        '<span data-id="2-prev" class="visible">, </span>',
+        '<span data-id="2" class="visible">dear</span>',
+        '<span data-id="3-prev" class="visible"> </span>',
+        '<span data-id="3" class="current">world</span>',
+        '<span data-id="3-next">!</span>',
+      ].join("")
     );
   });
 });

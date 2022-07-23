@@ -1,0 +1,88 @@
+[
+  {
+    "type": "title",
+    "titleType": "title",
+    "text": {
+      "raw": "The Tragedy of Hamlet, Prince of Denmark",
+      "words": [
+        {
+          "token": "The",
+          "index": 1
+        },
+        {
+          "token": "Tragedy",
+          "index": 2
+        },
+        {
+          "token": "of",
+          "index": 3
+        },
+        {
+          "token": "Hamlet",
+          "index": 4
+        },
+        {
+          "token": "Prince",
+          "index": 5
+        },
+        {
+          "token": "of",
+          "index": 6
+        },
+        {
+          "token": "Denmark",
+          "index": 7
+        }
+      ]
+    },
+    "index": 1
+  },
+  {
+    "type": "title",
+    "titleType": "scene",
+    "text": {
+      "raw": "Act 1, Scene 1",
+      "words": [
+        {
+          "token": "Act",
+          "index": 8
+        },
+        {
+          "token": "1",
+          "index": 9
+        },
+        {
+          "token": "Scene",
+          "index": 10
+        },
+        {
+          "token": "1",
+          "index": 11
+        }
+      ]
+    },
+    "index": 2
+  },
+  {
+    "type": "title",
+    "titleType": "scene",
+    "text": {
+      "raw": "¡hola, que tal!",
+      "words": [
+        {
+          "token": "hola",
+          "index": 12
+        },
+        {
+          "token": "que",
+          "index": 13
+        },
+        {
+          "token": "tal",
+          "index": 14
+        }
+      ]
+    },
+    "index": 3
+  }
+]
