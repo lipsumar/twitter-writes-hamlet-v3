@@ -48,7 +48,9 @@ export default class Runner extends EventEmitter {
       currentCursor = await getCurrentCursor();
       const nextWords = await getNextWords(1);
       searchEngine.findWord(nextWords[0], tweet);
+      this.emit("watch", { word: nextWords[0] });
     });
     searchEngine.findWord(wordsToListen[0], lastTweet);
+    this.emit("watch", { word: wordsToListen[0] });
   }
 }

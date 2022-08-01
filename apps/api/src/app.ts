@@ -1,8 +1,16 @@
 import express from "express";
-import { getCurrentWord, getDbWordsAt, getLogs } from "core/lib";
+import {
+  getCurrentWord,
+  getDbWordsAt,
+  getLogs,
+  getTweetAtIndex,
+} from "core/lib";
 import cors from "cors";
 import { getEntriesInRange } from "./lib";
 import { Runner } from "core";
+import { tweet } from "./cheat";
+import { faker } from "@faker-js/faker";
+
 const app = express();
 
 const runner = new Runner();
@@ -70,9 +78,22 @@ function broadcast(data: any) {
     client.res.write(`data: ${JSON.stringify(data)}\n\n`)
   );
 }
+
+let cheatTimeout: NodeJS.Timeout;
+
 runner.on("match", async ({ word }) => {
+  if (cheatTimeout) {
+    clearTimeout(cheatTimeout);
+  }
   const dbWords = await getDbWordsAt([word.index, word.index + 1]);
   broadcast({ word: dbWords[0], currentWord: dbWords[1] });
+});
+
+runner.on("watch", ({ word }) => {
+  cheatTimeout = setTimeout(() => {
+    tweet(`${faker.random.word()} ${word.token} ${faker.random.word()}`);
+    console.log("=====> cheat tweet", word.token);
+  }, 1000 * 10);
 });
 runner.run();
 

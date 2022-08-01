@@ -7,6 +7,11 @@ declare global {
       TWITTER_CONSUMER_SECRET: string;
       TWITTER_ACCESS_TOKEN_KEY: string;
       TWITTER_ACCESS_TOKEN_SECRET: string;
+
+      TWH_CHEAT_API_KEY: string;
+      TWH_CHEAT_API_KEY_SECRET: string;
+      TWH_CHEAT_ACCESS_TOKEN: string;
+      TWH_CHEAT_ACCESS_TOKEN_SECRET: string;
     }
   }
 }

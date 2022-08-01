@@ -21,6 +21,7 @@
     "vitest": "^0.18.0"
   },
   "dependencies": {
+    "@faker-js/faker": "^7.3.0",
     "core": "workspace:*",
     "cors": "^2.8.5",
     "database": "workspace:*",
@@ -29,6 +30,7 @@
     "lodash": "^4.17.21",
     "parse-hamlet": "workspace:*",
     "tiny-invariant": "^1.2.0",
+    "twitter-api-v2": "^1.12.3",
     "types": "workspace:*"
   }
 }

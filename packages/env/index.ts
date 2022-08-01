@@ -12,6 +12,11 @@ const requiredKeys = [
   "TWITTER_CONSUMER_SECRET",
   "TWITTER_ACCESS_TOKEN_KEY",
   "TWITTER_ACCESS_TOKEN_SECRET",
+
+  "TWH_CHEAT_API_KEY",
+  "TWH_CHEAT_API_KEY_SECRET",
+  "TWH_CHEAT_ACCESS_TOKEN",
+  "TWH_CHEAT_ACCESS_TOKEN_SECRET",
 ];
 requiredKeys.forEach((key) => {
   if (!process.env[key]) {
