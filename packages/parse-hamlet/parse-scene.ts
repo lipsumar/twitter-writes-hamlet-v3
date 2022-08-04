@@ -3,6 +3,18 @@ import invariant from "tiny-invariant";
 import { parseText } from "./parse-text";
 import { Entry, Word } from "types";
 
+function ucFirst(str: string): string {
+  return str[0].toUpperCase() + str.substring(1).toLowerCase();
+}
+
+function fixNameCapitalization(str: string): string {
+  const m = str.match(/([A-Z]{2,})/g);
+  m?.forEach((upper) => {
+    str = str.replace(upper, ucFirst(upper));
+  });
+  return str;
+}
+
 export function parseScene(
   htmlPage: string,
   indexOffset: number,
@@ -31,12 +43,16 @@ export function parseScene(
     const { nodeName, textContent } = node;
 
     if (!textContent) continue;
-    const text = textContent.trim().replaceAll(/[\s\u00A0]+/g, " ");
+    let text = textContent.trim().replaceAll(/[\s\u00A0]+/g, " ");
 
     if (!text) continue;
 
     if (!["I", "B", "#text"].includes(nodeName)) {
       continue;
+    }
+
+    if (nodeName === "B") {
+      text = fixNameCapitalization(text);
     }
 
     const { words, lastIndex } = parseText(text, index);

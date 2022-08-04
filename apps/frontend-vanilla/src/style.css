@@ -7,21 +7,19 @@
   font-style: italic;
   src: url("Rubik-Italic-VariableFont_wght.ttf");
 }
-html,
-body {
-  height: 100%;
-}
+
 body {
   margin: 0;
-  /* font-family: Rubik, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  /* font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif; */
-  font-family: Rubik;
+  font-family: "Uchen", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(37 38 44);
+  background-color: rgb(54 55 57);
   color: #ddd;
-  overflow: hidden;
+
+  line-height: 1.45;
 }
 
 code {
@@ -36,20 +34,23 @@ code {
 }
 
 #app {
-  overflow-y: auto;
-  max-height: 80vh;
 }
 .entry {
   margin-bottom: 1em;
-  font-size: 20px;
+  font-size: 22px;
 }
 .entry--title {
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: bold;
 }
 .entry--direction {
   font-style: italic;
+  text-align: center;
+}
+.entry__name {
+  font-weight: 800;
+  font-variant-caps: small-caps;
 }
 
 .entry span {

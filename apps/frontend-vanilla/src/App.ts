@@ -2,9 +2,16 @@ import invariant from "tiny-invariant";
 import { Entry, LiveTextContent, LiveWord } from "types";
 import { renderTextContent } from "./lib";
 
-function element(tagName: string, html: string): HTMLElement {
+function element(
+  tagName: string,
+  attributes: Record<string, string>,
+  html: string
+): HTMLElement {
   const el = document.createElement(tagName);
   el.innerHTML = html;
+  Object.entries(attributes).forEach(([k, v]) => {
+    el.setAttribute(k, v);
+  });
   return el;
 }
 
@@ -43,14 +50,30 @@ export default class App {
     entryEl.classList.add("entry", `entry--${entry.type}`);
 
     if ("name" in entry) {
-      entryEl.appendChild(element("div", this.buildTextContent(entry.name)));
+      entryEl.appendChild(
+        element(
+          "div",
+          { class: "entry__name" },
+          this.buildTextContent(entry.name)
+        )
+      );
       if (entry.direction) {
         entryEl.appendChild(
-          element("div", this.buildTextContent(entry.direction))
+          element(
+            "div",
+            { class: "entry__direction" },
+            this.buildTextContent(entry.direction)
+          )
         );
       }
     }
-    entryEl.appendChild(element("div", this.buildTextContent(entry.text)));
+    entryEl.appendChild(
+      element(
+        "div",
+        { class: "entry__text" },
+        this.buildTextContent(entry.text)
+      )
+    );
 
     this.el.appendChild(entryEl);
   }
