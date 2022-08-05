@@ -25,12 +25,13 @@ const title = "The Tragedy of Hamlet, Prince of Denmark";
 const { lastIndex, words } = parseText(title, 1);
 allEntries.push({
   type: "title",
-  titleType: "title",
   text: {
     raw: title,
     words: words,
   },
   index: 1,
+  actNumber: 0,
+  sceneNumber: 0,
 });
 
 let index = lastIndex + 1;
@@ -41,7 +42,7 @@ for (const filename of files) {
   console.log("Parsing " + filename);
 
   const m = filename.match(/^A(\d)S(\d)/);
-  if (!m) throw new Error("bad filename");
+  invariant(m && m.length === 3, "bad filename");
 
   const actNumber = Number(m[1]);
   const sceneNumber = Number(m[2]);
@@ -52,39 +53,28 @@ for (const filename of files) {
     index
   );
   allEntries.push({
-    type: "title",
-    titleType: "scene",
+    type: "title-scene",
     text: {
       raw: sceneTitle,
       words: words,
     },
     index: entryIndex++,
+    actNumber,
+    sceneNumber,
   });
   index = sceneTitleLastIndex + 1;
 
   const { entries, lastIndex, lastEntryIndex } = parseScene(
     readFileSync(`./scenes-html-corrected/${filename}`, "utf-8"),
     index,
-    entryIndex
+    entryIndex,
+    actNumber,
+    sceneNumber
   );
   index = lastIndex + 1;
   entryIndex = lastEntryIndex + 1;
 
   allEntries.push(...entries);
-}
-
-const stats = { longestWord: "" };
-
-function statWord(w: Word) {
-  if (w.token.length > stats.longestWord.length) {
-    stats.longestWord = w.token;
-  }
-  if (
-    typeof w.alternative === "string" &&
-    w.alternative.length > stats.longestWord.length
-  ) {
-    stats.longestWord = w.alternative;
-  }
 }
 
 function validateEntries(entries: Entry[]) {
@@ -96,53 +86,11 @@ function validateEntries(entries: Entry[]) {
       `entry index mismatch (${entry.index} instead of ${entryIndex})`
     );
     entryIndex++;
-    if (entry.type === "dialogue" && !("continued" in entry)) {
-      entry.name.words.forEach((w) => {
-        statWord(w);
-        if (w.index !== index) {
-          console.log(entries[entryIndex - 1].text);
-          console.log(entry.name);
-        }
-        invariant(
-          w.index === index,
-          "[name] word index mismatch (" +
-            w.index +
-            " instead of " +
-            index +
-            ")"
-        );
-        index++;
-      });
-    }
-    if (
-      entry.type === "dialogue" &&
-      "continued" in entry &&
-      entry.continued === true
-    ) {
-      invariant(
-        typeof (entry as any).direction === "undefined",
-        "continued dialogue cant have direction"
-      );
-    }
-    if ("direction" in entry) {
-      invariant(entry.direction, "entry.direction cant be set and empty");
-      entry.direction.words.forEach((w) => {
-        statWord(w);
-        if (w.index !== index) {
-          console.log(entry.direction);
-        }
-        invariant(
-          w.index === index,
-          `[direction] word index mismatch (${w.index} instead of ${index})`
-        );
-        index++;
-      });
-    }
+
     entry.text.words.forEach((w) => {
-      statWord(w);
-      if (w.index !== index) {
-        console.log(entry.text);
-      }
+      // if (w.index !== index) {
+      //   console.log(entry.text);
+      // }
       invariant(
         w.index === index,
         "[text] word index mismatch (" + w.index + " instead of " + index + ")"
@@ -160,5 +108,5 @@ writeFileSync(
 validateEntries(allEntries);
 
 console.log("✅ all entries valid!");
-console.log(stats);
+
 writeFileSync("./entries.json", JSON.stringify(allEntries, null, 2));

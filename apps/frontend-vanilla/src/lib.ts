@@ -1,4 +1,4 @@
-import { LiveTextContent } from "types";
+import { TextContent } from "types";
 
 type Attributes = Record<string, any>;
 
@@ -34,7 +34,7 @@ export function elementString(
 }
 
 export function renderTextContent(
-  textContent: LiveTextContent,
+  textContent: TextContent,
   currentWordIndex: number
 ): string {
   const { words, raw } = textContent;

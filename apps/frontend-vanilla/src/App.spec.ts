@@ -21,7 +21,6 @@ describe("App", () => {
       currentWord: {
         id: 1,
         entry_index: 1,
-        entry_field: "text",
       },
     });
 
@@ -46,7 +45,6 @@ describe("App", () => {
         currentWord: {
           id: 1,
           entry_index: 1,
-          entry_field: "text",
         },
       });
       mockFetch("http://localhost:5000/entry/2", entries[1]);
@@ -72,7 +70,6 @@ describe("App", () => {
           currentWord: {
             id: 2,
             entry_index: 1,
-            entry_field: "text",
           },
         });
         await waitFor(() => {
@@ -87,7 +84,6 @@ describe("App", () => {
           currentWord: {
             id: 3,
             entry_index: 1,
-            entry_field: "text",
           },
         });
         await waitFor(() => {
@@ -102,7 +98,6 @@ describe("App", () => {
           currentWord: {
             id: 4,
             entry_index: 1,
-            entry_field: "text",
           },
         });
         await waitFor(() => {
@@ -119,7 +114,6 @@ describe("App", () => {
           currentWord: {
             id: 5,
             entry_index: 1,
-            entry_field: "text",
           },
         });
         await waitFor(() => {
@@ -136,7 +130,6 @@ describe("App", () => {
           currentWord: {
             id: 6,
             entry_index: 1,
-            entry_field: "text",
           },
         });
         await waitFor(() => {
@@ -156,7 +149,6 @@ describe("App", () => {
         currentWord: {
           id: 12,
           entry_index: 3,
-          entry_field: "text",
         },
       });
       mockFetch("http://localhost:5000/entry/4", entries[1]);
@@ -186,7 +178,6 @@ describe("App", () => {
           currentWord: {
             id: 13,
             entry_index: 3,
-            entry_field: "text",
           },
         });
         await waitFor(() => {
@@ -203,7 +194,6 @@ describe("App", () => {
           currentWord: {
             id: 14,
             entry_index: 3,
-            entry_field: "text",
           },
         });
         await waitFor(() => {
@@ -221,7 +211,6 @@ describe("App", () => {
           currentWord: {
             id: 15,
             entry_index: 3,
-            entry_field: "text",
           },
         });
         await waitFor(() => {

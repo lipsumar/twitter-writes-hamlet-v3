@@ -36,21 +36,29 @@ code {
 #app {
 }
 .entry {
-  margin-bottom: 1em;
   font-size: 22px;
 }
 .entry--title {
   text-align: center;
   font-size: 1.5em;
   font-weight: bold;
+  font-variant: small-caps;
+  margin-bottom: 1em;
+}
+.entry--title-scene {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
 }
 .entry--direction {
   font-style: italic;
   text-align: center;
 }
-.entry__name {
+.entry--name {
   font-weight: 800;
   font-variant-caps: small-caps;
+  margin-top: 1em;
 }
 
 .entry span {

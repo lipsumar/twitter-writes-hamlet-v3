@@ -1,5 +1,5 @@
 import invariant from "tiny-invariant";
-import { Entry, LiveTextContent, LiveWord } from "types";
+import { Entry, TextContent } from "types";
 import { renderTextContent } from "./lib";
 
 function element(
@@ -18,12 +18,11 @@ function element(
 type CurrentWord = {
   id: number;
   entry_index: number;
-  entry_field: "text" | "name" | "direction";
 };
 
 export default class App {
   el: HTMLDivElement;
-  entries: Entry<LiveTextContent>[] = [];
+  entries: Entry[] = [];
   currentWord: CurrentWord | null = null;
 
   constructor(el: HTMLDivElement) {
@@ -45,28 +44,10 @@ export default class App {
     });
   }
 
-  appendEntry(entry: Entry<LiveTextContent>): void {
+  appendEntry(entry: Entry): void {
     const entryEl = document.createElement("div");
     entryEl.classList.add("entry", `entry--${entry.type}`);
 
-    if ("name" in entry) {
-      entryEl.appendChild(
-        element(
-          "div",
-          { class: "entry__name" },
-          this.buildTextContent(entry.name)
-        )
-      );
-      if (entry.direction) {
-        entryEl.appendChild(
-          element(
-            "div",
-            { class: "entry__direction" },
-            this.buildTextContent(entry.direction)
-          )
-        );
-      }
-    }
     entryEl.appendChild(
       element(
         "div",
@@ -78,12 +59,12 @@ export default class App {
     this.el.appendChild(entryEl);
   }
 
-  buildTextContent(textContent: LiveTextContent): string {
+  buildTextContent(textContent: TextContent): string {
     const html = renderTextContent(textContent, this.currentWord!.id);
     return html;
   }
 
-  fetchEntry(entryIndex: number): Promise<Entry<LiveTextContent>> {
+  fetchEntry(entryIndex: number): Promise<Entry> {
     return fetch("http://localhost:5000/entry/" + entryIndex).then((resp) =>
       resp.json()
     );
@@ -127,17 +108,12 @@ export default class App {
     this.el
       .querySelector(`span[data-id="${this.currentWord!.id}"]`)
       ?.classList.add("visible");
-    // this.el
-    //   .querySelector(`span[data-id="${this.currentWord!.id}-prev"]`)
-    //   ?.classList.add("visible");
 
     const currentEntry = this.entries.find(
       (e) => e.index === this.currentWord!.entry_index
     );
     invariant(typeof currentEntry !== "undefined");
-    const textContent = (currentEntry as any)[
-      this.currentWord!.entry_field
-    ] as LiveTextContent;
+    const textContent = currentEntry.text;
     const isLastWordOfEntry =
       textContent.words.map((w) => w.index).indexOf(this.currentWord!.id) ===
       textContent.words.length - 1;

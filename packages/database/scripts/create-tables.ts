@@ -14,12 +14,13 @@ import { db } from "..";
 
   await db.schema.createTable("entries", (table) => {
     table.integer("id");
-    table.enu("type", ["dialogue", "direction", "title"]).notNullable();
-    table.string("text_raw", 4000).notNullable();
-    table.string("name_raw");
-    table.string("direction_raw");
-    table.boolean("continued").defaultTo(false);
-    table.enu("title_type", ["title", "scene"]);
+    table
+      .enu("type", ["dialogue", "name", "direction", "title", "title-scene"])
+      .notNullable();
+    table.string("text_raw", 500).notNullable();
+    table.integer("act_number").notNullable();
+    table.integer("scene_number").notNullable();
+    table.integer("line_number");
 
     table.primary(["id"]);
   });
@@ -29,7 +30,6 @@ import { db } from "..";
     table.string("token", 20).notNullable();
     table.string("alternative", 20);
     table.integer("entry_index").notNullable();
-    table.enu("entry_field", ["text", "name", "direction"]).notNullable();
     table.string("tweet_id", 32);
     table.string("source", 16);
 

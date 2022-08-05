@@ -18,7 +18,9 @@ function fixNameCapitalization(str: string): string {
 export function parseScene(
   htmlPage: string,
   indexOffset: number,
-  entryIndexOffset: number
+  entryIndexOffset: number,
+  actNumber: number,
+  sceneNumber: number
 ): { entries: Entry[]; lastIndex: number; lastEntryIndex: number } {
   const dom = new JSDOM(htmlPage);
   const mainDiv = dom.window.document.querySelector("body > div.text");
@@ -27,27 +29,28 @@ export function parseScene(
 
   const entries: Entry[] = [];
 
-  const getLastEntry = () => entries[entries.length - 1] || {};
-  const appendToEntry = (text: string, words: Word[], entry: Entry) => {
-    entry.text.raw += (entry.text.raw !== "" ? " " : "") + text;
-    entry.text.words.push(...words);
-  };
-
-  const appendToLastEntry = (text: string, words: Word[]) =>
-    appendToEntry(text, words, getLastEntry());
-
   let index = indexOffset;
   let entryIndex = entryIndexOffset;
-
+  let lastLineNumber = null;
   for (const node of nodes) {
     const { nodeName, textContent } = node;
+
+    if (!["I", "B", "#text", "CODE"].includes(nodeName)) {
+      continue;
+    }
 
     if (!textContent) continue;
     let text = textContent.trim().replaceAll(/[\s\u00A0]+/g, " ");
 
     if (!text) continue;
 
-    if (!["I", "B", "#text"].includes(nodeName)) {
+    if (nodeName === "CODE") {
+      const parsedLineNumber = parseInt(text, 10);
+      invariant(
+        Number.isInteger(parsedLineNumber),
+        "line number expected to be integer"
+      );
+      lastLineNumber = parsedLineNumber;
       continue;
     }
 
@@ -58,55 +61,37 @@ export function parseScene(
     const { words, lastIndex } = parseText(text, index);
     index = lastIndex + 1;
 
-    const lastEntry = getLastEntry();
-
     if (nodeName === "I") {
-      if (lastEntry.type === "direction") {
-        appendToLastEntry(text, words);
-      } else if (lastEntry.type === "dialogue" && lastEntry.text.raw === "") {
-        invariant(
-          !("continued" in lastEntry),
-          "cant add direction to continuedDialogue"
-        );
-        lastEntry.direction = { raw: text, words };
-      } else {
-        entries.push({
-          type: "direction",
-          text: {
-            raw: text,
-            words,
-          },
-          index: entryIndex++,
-        });
-      }
+      entries.push({
+        index: entryIndex++,
+        type: "direction",
+        text: { raw: text, words },
+        actNumber,
+        sceneNumber,
+      });
     }
 
     if (nodeName === "B") {
       entries.push({
-        type: "dialogue",
-        name: { raw: text, words },
-        text: { raw: "", words: [] },
         index: entryIndex++,
+        type: "name",
+        text: { raw: text, words },
+        actNumber,
+        sceneNumber,
       });
     }
 
     if (nodeName === "#text") {
-      if (lastEntry.type === "dialogue") {
-        appendToLastEntry(text, words);
-      } else {
-        // continued dialogue after a direction
-        const previousDialogue = entries[entries.length - 2];
-        invariant(previousDialogue.type === "dialogue");
-        entries.push({
-          type: "dialogue",
-          continued: true,
-          // name: previousDialogue.name,
-          text: { raw: text, words },
-          index: entryIndex++,
-        });
-      }
+      invariant(typeof lastLineNumber === "number");
+      entries.push({
+        index: entryIndex++,
+        type: "dialogue",
+        text: { raw: text, words },
+        lineNumber: lastLineNumber,
+        actNumber,
+        sceneNumber,
+      });
     }
-    //console.log(nodeName, "--", entryIndex);
   }
 
   entries.forEach((e, i) => {
@@ -116,27 +101,18 @@ export function parseScene(
       console.log(`Invalid entry #${i}:`, e);
       console.log(err.message);
       console.log("- previous: ", entries[i - 1] || "none");
+      throw err;
     }
   });
-  //console.log(JSON.stringify(entries, null, 2));
 
   return { entries, lastIndex: index - 1, lastEntryIndex: entryIndex - 1 };
 }
 
 function validateEntry(entry: Entry): void {
-  if (entry.type === "direction") {
-    invariant(entry.text.raw.trim() !== "", "direction must have a text");
-  }
   if (entry.type === "dialogue") {
-    invariant(entry.text.raw.trim() !== "", "dialogue must have a text");
-    if (!("continued" in entry)) {
-      invariant(entry.name.raw.trim() !== "", "dialogue must have a name");
-      if (typeof entry.direction !== "undefined") {
-        invariant(
-          entry.direction.raw.trim() !== "",
-          "dialogue.direction must have a text"
-        );
-      }
-    }
+    invariant(
+      typeof entry.lineNumber === "number",
+      "dialogue must have lineNumber"
+    );
   }
 }

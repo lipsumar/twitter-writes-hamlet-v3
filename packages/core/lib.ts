@@ -25,7 +25,6 @@ type DbWord = {
   token: string;
   alternative: string | null;
   entry_index: number;
-  entry_field: "text" | "name" | "direction";
   tweet_id: string | null;
   source: string | null;
 };
@@ -115,10 +114,9 @@ export async function getLogs(filterMessages: string[]): Promise<DbLog[]> {
 
 export type DbEntry = {
   id: number;
-  type: "dialogue" | "direction" | "title";
+  type: "dialogue" | "name" | "direction" | "title" | "title-scene";
   text_raw: string;
-  name_raw: string | null;
-  direction_raw: string | null;
-  continued: boolean;
-  title_type: "title" | "scene";
+  act_number: number;
+  scene_number: number;
+  line_number: number | null;
 };
