@@ -11,7 +11,8 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "start-api": "(cd apps/api && pnpm start)"
+    "start-api": "(cd apps/api && pnpm start)",
+    "init-db": "(cd packages/database && pnpm run create-tables)"
   },
   "devDependencies": {
     "prettier": "latest",
