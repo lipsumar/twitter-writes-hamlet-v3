@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
-    "dev": "ts-node src/server.ts"
+    "dev": "ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",

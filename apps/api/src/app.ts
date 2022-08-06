@@ -1,15 +1,12 @@
 import express from "express";
-import {
-  getCurrentWord,
-  getDbWordsAt,
-  getLogs,
-  getTweetAtIndex,
-} from "core/lib";
+import { lib as coreLib } from "core";
 import cors from "cors";
 import { getEntriesInRange } from "./lib";
 import { Runner } from "core";
 import { tweet } from "./cheat";
 import { faker } from "@faker-js/faker";
+
+const { getCurrentWord, getDbWordsAt, getLogs } = coreLib;
 
 const app = express();
 

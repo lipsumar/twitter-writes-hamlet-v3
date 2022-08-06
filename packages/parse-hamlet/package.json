@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dl-hamlet": "ts-node ./dl-hamlet.ts",
-    "parse": "ts-node ./parse.ts"
+    "parse": "ts-node ./parse.ts",
+    "build": "tsc && cp entries.json dist/entries.json"
   },
   "engines": {
     "node": "v18.2.0"

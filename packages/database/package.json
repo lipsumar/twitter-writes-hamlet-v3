@@ -2,8 +2,9 @@
   "name": "database",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
     "create-tables": "ts-node scripts/create-tables.ts",
     "drop-tables": "ts-node scripts/drop-tables.ts",
     "seed": "ts-node scripts/seed.ts",

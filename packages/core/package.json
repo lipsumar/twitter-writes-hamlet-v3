@@ -2,9 +2,10 @@
   "name": "core",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
-    "run": "ts-node run.ts"
+    "run": "ts-node run.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
