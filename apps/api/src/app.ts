@@ -32,8 +32,8 @@ app.get("/init", async (req, res) => {
   res.send({
     currentWord,
     entries: await getEntriesInRange(currentWord.entry_index, {
-      before: 10,
-      after: 0,
+      before: 15,
+      after: 1,
     }),
   });
 });
