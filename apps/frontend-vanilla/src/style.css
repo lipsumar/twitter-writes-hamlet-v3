@@ -1,26 +1,16 @@
 @font-face {
-  font-family: "Rubik";
-  src: url("fonts/rubik/Rubik-VariableFont_wght.ttf");
-}
-@font-face {
-  font-family: "Rubik";
-  font-style: italic;
-  src: url("fonts/rubik/Rubik-Italic-VariableFont_wght.ttf");
-}
-
-@font-face {
   font-family: "caslon";
-  src: url("fonts/caslon-pro/ACaslonPro-Regular.otf");
+  src: url("/fonts/caslon-pro/ACaslonPro-Regular.otf");
 }
 @font-face {
   font-family: "caslon";
   font-weight: bold;
-  src: url("fonts/caslon-pro/ACaslonPro-Bold.otf");
+  src: url("/fonts/caslon-pro/ACaslonPro-Bold.otf");
 }
 @font-face {
   font-family: "caslon";
   font-style: italic;
-  src: url("fonts/caslon-pro/ACaslonPro-Italic.otf");
+  src: url("/fonts/caslon-pro/ACaslonPro-Italic.otf");
 }
 
 body {
