@@ -51,13 +51,9 @@ code {
 }
 
 .entry {
-  font-size: 18px;
+  font-size: 22px;
 }
-@media (min-width: 620px) {
-  .entry {
-    font-size: 22px;
-  }
-}
+
 @media (min-width: 1200px) {
   .entry {
     font-size: 24px;
