@@ -88,7 +88,7 @@ runner.on("match", async ({ word }) => {
 
 runner.on("watch", ({ word }) => {
   cheatTimeout = setTimeout(() => {
-    tweet(`${faker.random.word()} ${word.token} ${faker.random.word()}`);
+    tweet(`${faker.lorem.words()} ${word.token} ${faker.lorem.words()}`);
     console.log("=====> cheat tweet", word.token);
   }, 1000 * 60);
 });
