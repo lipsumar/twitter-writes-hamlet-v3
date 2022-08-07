@@ -16,8 +16,6 @@ services:
   app:
     build: .
     restart: always
-    # ports:
-    #   - "80:5000"
     depends_on:
       - db
     environment:
@@ -29,6 +27,22 @@ services:
       - "traefik.docker.network=traefik-external"
     networks:
       - internal
+      - traefik-external
+
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    depends_on:
+      - app
+    environment:
+      - VITE_API_URL=https://api.twitter-writes-hamlet.com
+    labels:
+      - "traefik.http.routers.frontend.rule=Host(`twitter-writes-hamlet.com`)"
+      - "traefik.http.routers.frontend.tls.certresolver=le"
+      - "traefik.http.routers.frontend.entrypoints=websecure"
+      - "traefik.docker.network=traefik-external"
+    networks:
       - traefik-external
 
 networks:

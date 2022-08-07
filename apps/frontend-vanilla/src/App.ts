@@ -27,7 +27,7 @@ export default class App {
 
   constructor(el: HTMLDivElement) {
     this.el = el;
-    fetch("http://localhost:5000/init")
+    fetch(`${import.meta.env.VITE_API_URL}/init`)
       .then((resp) => resp.json())
       .then((initData) => {
         this.entries = initData.entries;
@@ -65,13 +65,13 @@ export default class App {
   }
 
   fetchEntry(entryIndex: number): Promise<Entry> {
-    return fetch("http://localhost:5000/entry/" + entryIndex).then((resp) =>
-      resp.json()
+    return fetch(`${import.meta.env.VITE_API_URL}/entry/` + entryIndex).then(
+      (resp) => resp.json()
     );
   }
 
   listenToEvents() {
-    const source = new EventSource("http://localhost:5000/events");
+    const source = new EventSource(`${import.meta.env.VITE_API_URL}/events`);
     source.onmessage = (e) => {
       this.onServerEvent(e);
     };

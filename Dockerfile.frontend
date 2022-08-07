@@ -1,0 +1,30 @@
+FROM node:18.2-alpine
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+RUN npm i -g pnpm
+
+COPY package.json /usr/src/app/
+COPY pnpm-lock.yaml /usr/src/app/
+COPY pnpm-workspace.yaml /usr/src/app/
+COPY turbo.json /usr/src/app/
+COPY apps/frontend-vanilla/package.json /usr/src/app/apps/frontend-vanilla/
+COPY packages/types/package.json /usr/src/app/packages/types/
+
+
+RUN pnpm install
+
+COPY apps/frontend-vanilla /usr/src/app/apps/frontend-vanilla
+COPY packages/types /usr/src/app/packages/types
+
+#RUN pnpm install
+
+RUN apk add git
+
+RUN pnpm run build
+
+
+
+FROM nginx:1.23
+COPY --from=0 /usr/src/app/apps/frontend-vanilla/dist /usr/share/nginx/html
+COPY --from=0 /usr/src/app/apps/frontend-vanilla/nginx.conf /etc/nginx/conf.d/default.conf
+
