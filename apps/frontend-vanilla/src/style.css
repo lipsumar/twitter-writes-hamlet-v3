@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "caslon";
   src: url("/fonts/caslon-pro/ACaslonPro-Regular.otf");
@@ -12,19 +16,18 @@
   font-style: italic;
   src: url("/fonts/caslon-pro/ACaslonPro-Italic.otf");
 }
+@font-face {
+  font-family: "moon";
+  src: url("/fonts/moon/Moon-Light.otf");
+}
 
 body {
-  margin: 0;
   /* font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif; */
-  font-family: "caslon", monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
   background-color: rgb(54 55 57);
   color: #ddd;
-
-  line-height: 1.45;
 }
 
 code {
@@ -32,23 +35,27 @@ code {
     monospace;
 }
 
+.site-title {
+  font-family: moon;
+
+  line-height: 1;
+  color: #fff;
+}
+
 #hamlet-text {
-  max-width: 620px;
-  margin-left: 1em;
-  margin-right: 1em;
+  line-height: 1.45;
+  font-family: "caslon", serif;
 }
 @media (min-width: 620px) {
   #hamlet-text {
-    margin-right: 0;
-    margin-left: 15%;
   }
 }
 
-.container {
+/* .container {
   max-width: 700px;
   margin: 0 auto;
   height: 100%;
-}
+} */
 
 .entry {
   font-size: 22px;
@@ -109,4 +116,14 @@ span.visible {
 }
 span.current {
   animation: blink 0.6s alternate infinite;
+}
+
+.progress-bar {
+  border: 1px solid currentColor;
+  height: 2rem;
+}
+
+.progress-bar__inner {
+  height: 100%;
+  width: 22%;
 }
