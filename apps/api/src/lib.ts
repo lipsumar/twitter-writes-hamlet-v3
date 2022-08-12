@@ -43,3 +43,8 @@ export async function getEntriesInRange(
 
   return entriesInRange;
 }
+
+export async function getCompletedCount() {
+  const row = await db("words").count().whereNotNull("tweet_id");
+  return parseInt(row[0].count as string, 10);
+}

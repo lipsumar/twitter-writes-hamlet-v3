@@ -1,7 +1,7 @@
 import express from "express";
 import { lib as coreLib } from "core";
 import cors from "cors";
-import { getEntriesInRange } from "./lib";
+import { getCompletedCount, getEntriesInRange } from "./lib";
 import { Runner } from "core";
 import { tweet } from "./cheat";
 import { faker } from "@faker-js/faker";
@@ -32,6 +32,10 @@ app.get("/init", async (req, res) => {
       before: 15,
       after: 1,
     }),
+    stats: {
+      total: 31979,
+      completed: await getCompletedCount(),
+    },
   });
 });
 

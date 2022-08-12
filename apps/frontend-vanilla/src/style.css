@@ -127,3 +127,7 @@ span.current {
   height: 100%;
   width: 22%;
 }
+
+.stat-cell {
+  border-bottom: 6px solid rgb(206, 206, 206);
+}

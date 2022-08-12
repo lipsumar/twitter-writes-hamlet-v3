@@ -15,14 +15,16 @@
   <body>
     <div class="container md:mx-auto px-4">
       <div class="lg:grid grid-cols-12 gap-6">
-        <div class="col-start-8 col-span-5 lg:pb-0 pb-8 min-w-0 text-white">
+        <div class="col-start-8 col-span-5 lg:pb-0 pb-4 text-white">
           <h1
-            class="site-title py-8 text-center lg:text-right text-5xl xl:text-5xl"
+            class="site-title py-8 text-center lg:text-right text-4xl lg:text-5xl xl:text-6xl"
           >
             Twitter Writes <br />Hamlet
           </h1>
           <div class="md:grid grid-cols-6 gap-6">
-            <div class="col-start-2 col-span-4">
+            <div
+              class="col-start-2 col-span-4 lg:col-start-2 lg:col-span-5 opacity-70 italic"
+            >
               <p class="pb-2">
                 Can Twitter write Hamlet? Is it possible that hidden in all the
                 Twitter noise is the complete Hamlet play?
@@ -32,10 +34,50 @@
           </div>
 
           <div class="progress-bar mt-8">
-            <div class="progress-bar__inner text-black bg-white text-right">
-              <span class="align-middle pr-2">22%</span>
+            <div
+              class="progress-bar__inner text-black bg-white text-right"
+              id="stats-complete-progress-bar"
+            >
+              <span
+                class="align-middle pr-2"
+                id="stats-complete-progress-bar-pc"
+                >22%</span
+              >
             </div>
-            <div class="text-sm mt-2">1427 words written out of 29634</div>
+          </div>
+          <div class="text-sm mt-2">
+            <span id="stats-complete-completed">0</span> words written out of
+            <span id="stats-complete-total">0</span>
+          </div>
+
+          <!-- stats -->
+          <div class="mt-8">
+            <div class="md:grid grid-cols-2 gap-8">
+              <div
+                class="stat-cell pb-4 flex flex-col justify-end mb-6 md:mb-0"
+              >
+                <div class="stat-cell__figure text-2xl">
+                  5 weeks, 4 days, 10 hours ago
+                </div>
+                <div class="stat-cell__label opacity-70">
+                  Experiment started
+                </div>
+              </div>
+
+              <div
+                class="stat-cell pb-4 flex flex-col justify-end mb-6 md:mb-0"
+              >
+                <div class="stat-cell__figure text-4xl">1452</div>
+                <div class="stat-cell__label opacity-70">Words tweeted</div>
+              </div>
+
+              <div
+                class="stat-cell pb-4 flex flex-col justify-end mb-6 md:mb-0"
+              >
+                <div class="stat-cell__figure text-4xl">3 minutes</div>
+                <div class="stat-cell__label opacity-70">since last tweet</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-span-6 row-span-3 order-first">

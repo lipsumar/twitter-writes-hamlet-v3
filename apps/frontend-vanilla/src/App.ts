@@ -24,6 +24,7 @@ export default class App {
   el: HTMLDivElement;
   entries: Entry[] = [];
   currentWord: CurrentWord | null = null;
+  stats: { total: number; completed: number } = { total: 0, completed: 0 };
 
   constructor(el: HTMLDivElement) {
     this.el = el;
@@ -32,6 +33,7 @@ export default class App {
       .then((initData) => {
         this.entries = initData.entries;
         this.currentWord = initData.currentWord;
+        this.stats = initData.stats;
         this.build();
         this.scrollToBottom();
         this.listenToEvents();
@@ -42,6 +44,19 @@ export default class App {
     this.entries.forEach((entry) => {
       this.appendEntry(entry);
     });
+
+    // @todo for the love of god let's pull this in another module
+    const pcCompleted = (this.stats.completed / this.stats.total) * 100;
+    document.body.querySelector("#stats-complete-completed")!.innerHTML =
+      this.stats.completed.toString();
+    document.body.querySelector("#stats-complete-total")!.innerHTML =
+      this.stats.total.toString();
+    document.body.querySelector(
+      "#stats-complete-progress-bar-pc"
+    )!.innerHTML = `${pcCompleted.toPrecision(2)}%`;
+    document.body.querySelector<HTMLDivElement>(
+      "#stats-complete-progress-bar"
+    )!.style.width = `${pcCompleted.toPrecision(2)}%`;
   }
 
   appendEntry(entry: Entry): void {
