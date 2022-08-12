@@ -90,7 +90,7 @@ runner.on("watch", ({ word }) => {
   cheatTimeout = setTimeout(() => {
     tweet(`${faker.lorem.words()} ${word.token} ${faker.lorem.words()}`);
     console.log("=====> cheat tweet", word.token);
-  }, 1000 * 60);
+  }, 1000 * 60 * 60 * 24);
 });
 runner.run();
 
