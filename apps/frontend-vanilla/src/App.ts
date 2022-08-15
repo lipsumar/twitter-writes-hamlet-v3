@@ -1,19 +1,7 @@
 import invariant from "tiny-invariant";
 import { Entry, TextContent } from "types";
-import { renderTextContent } from "./lib";
-
-function element(
-  tagName: string,
-  attributes: Record<string, string>,
-  html: string
-): HTMLElement {
-  const el = document.createElement(tagName);
-  el.innerHTML = html;
-  Object.entries(attributes).forEach(([k, v]) => {
-    el.setAttribute(k, v);
-  });
-  return el;
-}
+import { element, renderTextContent } from "./lib";
+import TweetHover from "./TweetHover";
 
 type CurrentWord = {
   id: number;
@@ -28,6 +16,7 @@ export default class App {
 
   constructor(el: HTMLDivElement) {
     this.el = el;
+    new TweetHover(el);
     fetch(`${import.meta.env.VITE_API_URL}/init`)
       .then((resp) => resp.json())
       .then((initData) => {

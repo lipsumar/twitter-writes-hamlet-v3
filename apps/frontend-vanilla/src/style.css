@@ -131,3 +131,13 @@ span.current {
 .stat-cell {
   border-bottom: 6px solid rgb(206, 206, 206);
 }
+
+.tweet-tooltip {
+  background-color: #ddd;
+  color: #333;
+  padding: 1rem;
+  position: absolute;
+  display: none;
+  max-width: 400px;
+  z-index: 100;
+}

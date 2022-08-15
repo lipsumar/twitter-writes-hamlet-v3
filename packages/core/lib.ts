@@ -87,12 +87,15 @@ function dbTweetToTweet(dbTweet: DbTweet): Tweet {
     },
   };
 }
-export async function getTweetAtIndex(index: number): Promise<Tweet> {
+export async function getTweetAtIndex(index: number): Promise<Tweet | null> {
   const rows = await db("words")
-    .join("tweets", "words.tweet_id", "tweets.id")
+    .join("tweets", "words.tweet_id", "=", "tweets.id")
     .select("tweets.*")
     .where({ "words.id": index })
     .limit(1);
+  if (rows.length === 0) {
+    return null;
+  }
   return dbTweetToTweet(rows[0]);
 }
 

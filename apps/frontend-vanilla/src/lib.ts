@@ -22,6 +22,20 @@ function attrsToString(attrs: Attributes): string {
     .filter(Boolean)
     .join(" ");
 }
+export function element<T = HTMLElement>(
+  tagName: string,
+  attributes: Record<string, string>,
+  html?: string
+): T {
+  const el = document.createElement(tagName);
+  if (html) {
+    el.innerHTML = html;
+  }
+  Object.entries(attributes).forEach(([k, v]) => {
+    el.setAttribute(k, v);
+  });
+  return el as unknown as T;
+}
 export function elementString(
   tagName: string,
   attrs: Attributes = {},
@@ -97,4 +111,27 @@ export function renderTextContent(
     );
   }
   return html;
+}
+
+export function getCoords(elem: HTMLElement) {
+  // crossbrowser version
+  var box = elem.getBoundingClientRect();
+
+  var body = document.body;
+  var docEl = document.documentElement;
+
+  var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+  var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+  var clientTop = docEl.clientTop || body.clientTop || 0;
+  var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+  var top = box.top + scrollTop - clientTop;
+  var left = box.left + scrollLeft - clientLeft;
+
+  return {
+    top: Math.round(top),
+    left: Math.round(left),
+    height: Math.round(elem.offsetHeight),
+  };
 }

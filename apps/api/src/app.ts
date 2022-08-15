@@ -5,6 +5,7 @@ import { getCompletedCount, getEntriesInRange } from "./lib";
 import { Runner } from "core";
 import { tweet } from "./cheat";
 import { faker } from "@faker-js/faker";
+import { getTweetAtIndex } from "core/lib";
 
 const { getCurrentWord, getDbWordsAt, getLogs } = coreLib;
 
@@ -45,6 +46,12 @@ app.get("/entry/:entryIndex", async (req, res) => {
     after: 0,
   });
   res.send(entries[0]);
+});
+
+app.get("/tweet/:tweetId", async (req, res) => {
+  const tweetId = parseInt(req.params.tweetId, 10);
+  const tweet = await getTweetAtIndex(tweetId);
+  res.send(tweet);
 });
 
 let clients: any[] = [];

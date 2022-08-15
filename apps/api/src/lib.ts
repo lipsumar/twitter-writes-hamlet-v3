@@ -1,6 +1,6 @@
 import { Entry, TextContent } from "types";
 import entries from "parse-hamlet/entries.json";
-import { db } from "database";
+import { db, TweetRecord } from "database";
 import { cloneDeep } from "lodash";
 import invariant from "tiny-invariant";
 
