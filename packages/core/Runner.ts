@@ -38,6 +38,10 @@ export default class Runner extends EventEmitter {
       currentCursor === 1
         ? fakeOldTweet
         : await getTweetAtIndex(currentCursor - 1);
+    if (lastTweet === null) {
+      console.log("its over!!!");
+      return;
+    }
 
     const wordsToListen = await getNextWords(1);
 
