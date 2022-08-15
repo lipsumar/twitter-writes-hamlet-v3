@@ -5,9 +5,8 @@ import { getCompletedCount, getEntriesInRange } from "./lib";
 import { Runner } from "core";
 import { tweet } from "./cheat";
 import { faker } from "@faker-js/faker";
-import { getTweetAtIndex } from "core/lib";
 
-const { getCurrentWord, getDbWordsAt, getLogs } = coreLib;
+const { getCurrentWord, getDbWordsAt, getLogs, getTweetAtIndex } = coreLib;
 
 const app = express();
 
