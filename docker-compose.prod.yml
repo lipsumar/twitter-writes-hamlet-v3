@@ -25,6 +25,7 @@ services:
       - "traefik.http.routers.api.tls.certresolver=le"
       - "traefik.http.routers.api.entrypoints=websecure"
       - "traefik.docker.network=traefik-external"
+      - "traefik.http.middlewares.api.compress=true"
     networks:
       - internal
       - traefik-external
@@ -40,6 +41,7 @@ services:
       - "traefik.http.routers.frontend.tls.certresolver=le"
       - "traefik.http.routers.frontend.entrypoints=websecure"
       - "traefik.docker.network=traefik-external"
+      - "traefik.http.middlewares.frontend.compress=true"
     networks:
       - traefik-external
 
