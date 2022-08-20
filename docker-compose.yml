@@ -13,6 +13,26 @@ services:
     volumes:
       - ./packages/database/data:/var/lib/postgresql/data:rw
 
+  app:
+    build: .
+    restart: always
+    depends_on:
+      - db
+    environment:
+      - PG_CONNECTION_STRING=postgresql://postgres:password@db:5432/twh-dev
+
+  db-prod:
+    image: postgres
+    restart: always
+    ports:
+      - "5431:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: twh-dev
+    volumes:
+      - ./db-dumps:/home:rw
+
   adminer:
     image: adminer
     restart: always
