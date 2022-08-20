@@ -30,6 +30,7 @@
     "env": "workspace:*",
     "express": "^4.18.1",
     "lodash": "^4.17.21",
+    "newrelic": "^9.0.1",
     "parse-hamlet": "workspace:*",
     "tiny-invariant": "^1.2.0",
     "twitter-api-v2": "^1.12.3",
