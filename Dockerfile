@@ -34,6 +34,8 @@ COPY .env /usr/src/app/
 RUN apk add git
 RUN git init
 
+RUN cd packages/database && pnpm run build
+RUN pnpm run build --concurrency=1 --filter=database
 RUN pnpm run build --concurrency=1
 #RUN pnpm run lint
 EXPOSE 5000
