@@ -33,6 +33,9 @@ COPY .env /usr/src/app/
 
 RUN apk add git
 
+RUN pnpm run build --filter=parse-hamlet
+RUN pnpm run build --filter=database
+RUN pnpm run build --filter=core
 RUN pnpm run build
 #RUN pnpm run lint
 EXPOSE 5000
