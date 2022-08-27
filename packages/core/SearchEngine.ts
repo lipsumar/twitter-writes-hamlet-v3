@@ -5,6 +5,7 @@ import { Tweet } from "./Twitter";
 import { EventEmitter } from "events";
 import Twitter from "./Twitter";
 import { dbLog } from "./lib";
+import logger from "logger";
 async function pause(ms: number) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms);
@@ -125,7 +126,7 @@ export default class SearchEngine extends EventEmitter {
 
   matchTweet(tweet: Tweet, terms: string[]): boolean {
     if (!tweet.text) {
-      console.log(tweet);
+      logger.warn(`tweet w/ no text ${JSON.stringify(tweet)}`);
     }
     return !!terms.find((t) => tweet.text.toLowerCase().includes(t));
   }
@@ -138,7 +139,7 @@ export default class SearchEngine extends EventEmitter {
     return terms;
   }
 
-  log(msg: string, ...rest: any[]) {
-    console.log(msg, ...rest);
+  log(msg: string, data?: any) {
+    logger.log({ message: `${msg}`, level: "info", data });
   }
 }

@@ -91,6 +91,7 @@ importers:
       database: workspace:*
       env: workspace:*
       lodash: ^4.17.21
+      logger: workspace:*
       tiny-invariant: ^1.2.0
       ts-node: ^10.8.0
       twit: ^2.2.11
@@ -101,6 +102,7 @@ importers:
       database: link:../database
       env: link:../env
       lodash: 4.17.21
+      logger: link:../logger
       tiny-invariant: 1.2.0
       twit: 2.2.11
       twitter-v2: 1.1.0

@@ -5,6 +5,7 @@ import { getCompletedCount, getEntriesInRange } from "./lib";
 import { Runner } from "core";
 import { tweet } from "./cheat";
 import { faker } from "@faker-js/faker";
+import logger from "logger";
 
 const { getCurrentWord, getDbWordsAt, getLogs, getTweetAtIndex } = coreLib;
 
@@ -76,7 +77,7 @@ app.get("/events", (req, res) => {
   clients.push(newClient);
 
   req.on("close", () => {
-    console.log(`${clientId} Connection closed`);
+    logger.info(`${clientId} Connection closed`);
     clients = clients.filter((client) => client.id !== clientId);
   });
 });
@@ -99,7 +100,7 @@ runner.on("match", async ({ word }) => {
 runner.on("watch", ({ word }) => {
   cheatTimeout = setTimeout(() => {
     tweet(`${faker.lorem.words()} ${word.token} ${faker.lorem.words()}`);
-    console.log("=====> cheat tweet", word.token);
+    logger.info("=====> cheat tweet", word.token);
   }, 1000 * 60 * 60 * 24);
 });
 runner.run();

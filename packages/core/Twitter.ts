@@ -1,3 +1,4 @@
+import logger from "logger";
 import invariant from "tiny-invariant";
 import Twit from "twit";
 import { dbLog } from "./lib";
@@ -62,7 +63,7 @@ export default class Twitter {
     if (new Date().getTime() > this.windowEnd) {
       this.startWindow();
     }
-    console.log(`[search] ${this.searchCountInLastWindow}/450`);
+    //console.log(`[search] ${this.searchCountInLastWindow}/450`);
     return {
       tweets: (resp.data as any).statuses.map((tw: any) => ({
         ...tw,
@@ -81,26 +82,26 @@ export default class Twitter {
     });
     stream.on("tweet", onTweet);
     stream.on("limit", (msg) => {
-      console.log("Stream: limit", msg);
+      logger.warn(`Stream: limit ${msg}`);
       dbLog("twitter.stream.limit", { msg });
     });
     stream.on("disconnect", (msg) => {
-      console.log("Stream: disconnect", msg);
+      logger.warn(`Stream: disconnect ${msg}`);
       dbLog("twitter.stream.disconnect", { msg });
     });
     stream.on("connected", (msg) => {
-      console.log("Stream: connected");
+      logger.info(`Stream: connected ${msg}`);
     });
     stream.on("reconnect", (msg) => {
-      console.log("Stream: reconnect", msg);
+      logger.warn(`Stream: reconnect ${msg}`);
       dbLog("twitter.stream.reconnect", { msg });
     });
     stream.on("warning", (msg) => {
-      console.log("Stream: warning", msg);
+      logger.warn(`Stream: warning ${msg}`);
       dbLog("twitter.stream.warning", { msg });
     });
     stream.on("error", (msg) => {
-      console.log("Stream: error", msg);
+      logger.warn(`Stream: error ${msg}`);
       dbLog("twitter.stream.error", { msg });
     });
     this.stream = stream;

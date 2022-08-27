@@ -8,6 +8,7 @@ import SearchEngine from "./SearchEngine";
 import Twitter from "./Twitter";
 import { Tweet } from "./Twitter";
 import { EventEmitter } from "events";
+import logger from "logger";
 const fakeOldTweet: Tweet = {
   created_at: "Mon Apr 08 16:47:52 +0000 2019",
   text: "blah",
@@ -39,7 +40,7 @@ export default class Runner extends EventEmitter {
         ? fakeOldTweet
         : await getTweetAtIndex(currentCursor - 1);
     if (lastTweet === null) {
-      console.log("its over!!!");
+      logger.info("its over!!!");
       return;
     }
 

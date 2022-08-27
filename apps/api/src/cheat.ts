@@ -8,6 +8,5 @@ const twitterClient = new TwitterApi({
 });
 
 export async function tweet(status: string) {
-  const res = await twitterClient.v2.tweet(status);
-  console.log(res);
+  await twitterClient.v2.tweet(status);
 }
