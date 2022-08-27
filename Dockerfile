@@ -32,6 +32,7 @@ COPY .env.defaults /usr/src/app/
 COPY .env /usr/src/app/
 
 RUN apk add git
+RUN git init
 
 RUN pnpm run build --filter=parse-hamlet
 RUN pnpm run build --filter=database
