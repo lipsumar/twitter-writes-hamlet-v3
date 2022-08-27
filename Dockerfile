@@ -13,6 +13,7 @@ COPY packages/database/package.json /usr/src/app/packages/database/
 COPY packages/parse-hamlet/package.json /usr/src/app/packages/parse-hamlet/
 COPY packages/env/package.json /usr/src/app/packages/env/
 COPY packages/types/package.json /usr/src/app/packages/types/
+COPY packages/logger/package.json /usr/src/app/packages/logger/
 
 
 RUN pnpm install
@@ -23,6 +24,7 @@ COPY packages/database /usr/src/app/packages/database
 COPY packages/parse-hamlet /usr/src/app/packages/parse-hamlet
 COPY packages/env /usr/src/app/packages/env
 COPY packages/types /usr/src/app/packages/types
+COPY packages/logger /usr/src/app/packages/logger
 
 #RUN pnpm install
 
