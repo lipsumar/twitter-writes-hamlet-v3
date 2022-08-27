@@ -34,10 +34,7 @@ COPY .env /usr/src/app/
 RUN apk add git
 RUN git init
 
-RUN pnpm run build --filter=parse-hamlet
-RUN pnpm run build --filter=database
-RUN pnpm run build --filter=core
-RUN pnpm run build
+RUN pnpm run build --concurrency=1
 #RUN pnpm run lint
 EXPOSE 5000
 CMD [ "pnpm", "start-api" ]
