@@ -68,6 +68,7 @@ importers:
       types: workspace:*
       typescript: ^4.6.4
       vite: ^3.0.0
+      vite-plugin-singlefile: ^0.11.1
       vitest: ^0.18.0
     dependencies:
       tiny-invariant: 1.2.0
@@ -80,6 +81,7 @@ importers:
       tailwindcss: 3.1.8
       typescript: 4.7.4
       vite: 3.0.2
+      vite-plugin-singlefile: 0.11.1_vite@3.0.2
       vitest: 0.18.0_@vitest+ui@0.18.1
 
   packages/core:
@@ -4347,6 +4349,15 @@ packages:
       core-util-is: 1.0.2
       extsprintf: 1.3.0
     dev: false
+
+  /vite-plugin-singlefile/0.11.1_vite@3.0.2:
+    resolution: {integrity: sha512-ZTT3XA2AM7rOf4UGmEM+FmMht000Uuc6OJSdlYqddFE9y7IrGDnNhFVQ/TZQMAFzZ0dYX3JzknAmrdKWe6s0xg==}
+    peerDependencies:
+      vite: ^2.9.13 || ^3.0.0
+    dependencies:
+      micromatch: 4.0.5
+      vite: 3.0.2
+    dev: true
 
   /vite/3.0.2:
     resolution: {integrity: sha512-TAqydxW/w0U5AoL5AsD9DApTvGb2iNbGs3sN4u2VdT1GFkQVUfgUldt+t08TZgi23uIauh1TUOQJALduo9GXqw==}
