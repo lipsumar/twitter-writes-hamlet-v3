@@ -1,7 +1,9 @@
 import invariant from "tiny-invariant";
 import { Entry, TextContent } from "types";
 import { element, renderTextContent } from "./lib";
+import { updateStats } from "./stats";
 import TweetHover from "./TweetHover";
+import { Stats } from "./types";
 
 type CurrentWord = {
   id: number;
@@ -12,7 +14,7 @@ export default class App {
   el: HTMLDivElement;
   entries: Entry[] = [];
   currentWord: CurrentWord | null = null;
-  stats: { total: number; completed: number } = { total: 0, completed: 0 };
+  stats: Stats = { total: 0, completed: 0, startedAt: null, lastTweetAt: null };
 
   constructor(el: HTMLDivElement) {
     this.el = el;
@@ -34,18 +36,7 @@ export default class App {
       this.appendEntry(entry);
     });
 
-    // @todo for the love of god let's pull this in another module
-    const pcCompleted = (this.stats.completed / this.stats.total) * 100;
-    document.body.querySelector("#stats-complete-completed")!.innerHTML =
-      this.stats.completed.toString();
-    document.body.querySelector("#stats-complete-total")!.innerHTML =
-      this.stats.total.toString();
-    document.body.querySelector(
-      "#stats-complete-progress-bar-pc"
-    )!.innerHTML = `${pcCompleted.toPrecision(2)}%`;
-    document.body.querySelector<HTMLDivElement>(
-      "#stats-complete-progress-bar"
-    )!.style.width = `${pcCompleted.toPrecision(2)}%`;
+    updateStats(this.stats);
   }
 
   appendEntry(entry: Entry): void {

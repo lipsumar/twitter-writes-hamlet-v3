@@ -26,7 +26,8 @@ app.get("/logs", async (req, res) => {
 
 app.get("/init", async (req, res) => {
   const currentWord = await getCurrentWord();
-
+  const firstTweet = await getTweetAtIndex(1);
+  const lastTweet = await getTweetAtIndex(currentWord.id - 1);
   res.send({
     currentWord,
     entries: await getEntriesInRange(currentWord.entry_index, {
@@ -36,6 +37,8 @@ app.get("/init", async (req, res) => {
     stats: {
       total: 31979,
       completed: await getCompletedCount(),
+      startedAt: firstTweet ? firstTweet.created_at : null,
+      lastTweetAt: lastTweet ? lastTweet.created_at : null,
     },
   });
 });

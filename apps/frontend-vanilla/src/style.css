@@ -125,7 +125,7 @@ span.current {
 
 .progress-bar__inner {
   height: 100%;
-  width: 22%;
+  width: 0;
 }
 
 .stat-cell {

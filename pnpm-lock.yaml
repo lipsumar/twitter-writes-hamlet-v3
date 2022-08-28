@@ -60,8 +60,10 @@ importers:
   apps/frontend-vanilla:
     specifiers:
       '@testing-library/dom': ^8.16.0
+      '@types/human-date': ^1.4.2
       '@vitest/ui': ^0.18.1
       autoprefixer: ^10.4.8
+      human-date: ^1.4.0
       postcss: ^8.4.16
       tailwindcss: ^3.1.8
       tiny-invariant: ^1.2.0
@@ -71,10 +73,12 @@ importers:
       vite-plugin-singlefile: ^0.11.1
       vitest: ^0.18.0
     dependencies:
+      human-date: 1.4.0
       tiny-invariant: 1.2.0
       types: link:../../packages/types
     devDependencies:
       '@testing-library/dom': 8.16.0
+      '@types/human-date': 1.4.2
       '@vitest/ui': 0.18.1
       autoprefixer: 10.4.8_postcss@8.4.16
       postcss: 8.4.16
@@ -591,6 +595,10 @@ packages:
 
   /@types/geojson/7946.0.10:
     resolution: {integrity: sha512-Nmh0K3iWQJzniTuPRcJn5hxXkfB1T1pgB89SBig5PlJQU5yocazeu4jATJlaA0GYFKWMqDdvYemoSnF2pXgLVA==}
+    dev: true
+
+  /@types/human-date/1.4.2:
+    resolution: {integrity: sha512-lL5QCqlRiwmPhUt64YsfIKStu5ujLCYMZuZlNqZTu8jmNTfZicwqqzwLxoagAyMxnXbq5DhvzZls0DX6JTHlHQ==}
     dev: true
 
   /@types/japanese-characters/1.1.0:
@@ -2399,6 +2407,10 @@ packages:
       debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /human-date/1.4.0:
+    resolution: {integrity: sha512-jhEvaL0yj8LZnphQqOylapYTLB91ZIaNuDnrHqDR/3/P1Mhil1kh1qgm75xQ/qi7iZSPKIjqrEx6kw9gTcdeuA==}
     dev: false
 
   /iconv-lite/0.4.24:

@@ -10,11 +10,13 @@
     "test": "vitest --config ./vitest.config.ts"
   },
   "dependencies": {
+    "human-date": "^1.4.0",
     "tiny-invariant": "^1.2.0",
     "types": "workspace:*"
   },
   "devDependencies": {
     "@testing-library/dom": "^8.16.0",
+    "@types/human-date": "^1.4.2",
     "@vitest/ui": "^0.18.1",
     "autoprefixer": "^10.4.8",
     "postcss": "^8.4.16",
